@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="14.0sp" android:textColor="@color/ai_summarize_popup_text_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/ask_auto_complete_list_item" android:padding="12.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_marginStart="8.0dp" android:layout_marginEnd="28.0dp" style="@style/RobotoRegular"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

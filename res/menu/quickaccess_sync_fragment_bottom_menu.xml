@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_add_create_new_plus" android:id="@id/add_item" android:title="@string/quickaccess_tap_to_add" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_reset_restore_arrow_counterclockwise" android:id="@id/replace_item" android:title="@string/quickaccess_sync_replace" app:showAsAction="always" />
+</menu>

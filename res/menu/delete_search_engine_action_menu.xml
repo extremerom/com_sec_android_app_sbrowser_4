@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/internet_ic_delete" android:id="@id/delete_action_menu" android:visible="false" android:title="@string/delete" app:showAsAction="always" />
+    <item android:id="@id/cancel_menu_button" android:title="@string/cancel" app:showAsAction="always" />
+</menu>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sec.android.app.sbrowser.common.widget.AutoScaleTextView android:textSize="14.0sp" android:textColor="@color/ai_summarize_popup_text_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/ask_question_list_item" android:background="@drawable/ask_question_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="33.0dp" android:layout_marginHorizontal="20.0dp" android:layout_marginVertical="4.5dp" android:paddingHorizontal="12.0dp" app:textSizeDp="14.0dp" style="@style/RobotoRegular"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

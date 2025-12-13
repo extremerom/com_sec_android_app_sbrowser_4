@@ -1,0 +1,96 @@
+.class Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lorg/chromium/content/browser/webcontents/WebContentsObserverProxy$Natives;
+
+
+# annotations
+.annotation build Lorg/jni_zero/CheckDiscard;
+.end annotation
+
+.annotation build Lorg/jni_zero/internal/NullUnmarked;
+.end annotation
+
+
+# static fields
+.field static final synthetic $assertionsDisabled:Z
+
+.field private static sOverride:Lorg/jni_zero/a;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static get()Lorg/chromium/content/browser/webcontents/WebContentsObserverProxy$Natives;
+    .locals 1
+
+    sget-object v0, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;->sOverride:Lorg/jni_zero/a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lorg/jni_zero/a;->a:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxy$Natives;
+
+    return-object v0
+
+    :cond_0
+    invoke-static {}, Lb2/Q3;->b()V
+
+    new-instance v0, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;
+
+    invoke-direct {v0}, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static setInstanceForTesting(Lorg/chromium/content/browser/webcontents/WebContentsObserverProxy$Natives;)V
+    .locals 1
+
+    sget-object v0, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;->sOverride:Lorg/jni_zero/a;
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lorg/jni_zero/a;->a()Lorg/jni_zero/a;
+
+    move-result-object v0
+
+    sput-object v0, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;->sOverride:Lorg/jni_zero/a;
+
+    :cond_0
+    sget-object v0, Lorg/chromium/content/browser/webcontents/WebContentsObserverProxyJni;->sOverride:Lorg/jni_zero/a;
+
+    iput-object p0, v0, Lorg/jni_zero/a;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public destroy(JLorg/chromium/content/browser/webcontents/WebContentsObserverProxy;)V
+    .locals 0
+
+    invoke-static {p1, p2, p3}, LJ/N;->M7giG0Ri(JLjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public init(Lorg/chromium/content/browser/webcontents/WebContentsObserverProxy;Lorg/chromium/content/browser/webcontents/WebContentsImpl;)J
+    .locals 0
+
+    invoke-static {p1, p2}, LJ/N;->MTpUzW91(Ljava/lang/Object;Ljava/lang/Object;)J
+
+    move-result-wide p0
+
+    return-wide p0
+.end method

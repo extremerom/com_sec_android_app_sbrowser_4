@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/image_preview_layout" android:background="@color/color_image_preview_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/image_preview_viewPager" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/color_image_preview_text" android:id="@id/image_preview_index_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:layout_marginStart="15.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/RobotoMedium" />
+</androidx.constraintlayout.widget.ConstraintLayout>

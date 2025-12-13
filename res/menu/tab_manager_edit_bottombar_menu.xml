@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/internet_ic_move" android:id="@id/move_item" android:title="@string/show_bookmarks_move_command" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_tabs_group" android:id="@id/group_item" android:title="@string/tab_manager_group" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_tabs_lock" android:id="@id/lock_item" android:title="@string/action_lock" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_tabs_unlock" android:id="@id/unlock_item" android:title="@string/action_unlock" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_edit" android:id="@id/rename_group_item" android:title="@string/tab_manager_edit_tab_group" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_tabs_ungroup" android:id="@id/ungroup_item" android:title="@string/tab_manager_ungroup" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_share" android:id="@id/share_item" android:title="@string/action_share" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_tabs_close_all_tabs" android:id="@id/close_item" android:title="@string/options_menu_exit" app:showAsAction="always" />
+</menu>

@@ -1,0 +1,21 @@
+.class public interface abstract annotation Lcom/sec/android/app/sbrowser/multi_cp_native/newsfeed/model/base/ItemType$ItemMainType;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/sec/android/app/sbrowser/multi_cp_native/newsfeed/model/base/ItemType;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2609
+    name = "ItemMainType"
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+.end annotation

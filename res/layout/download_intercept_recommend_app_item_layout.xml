@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="@dimen/download_intercept_popup_sections_margin_top" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/recommend_app_icon" android:layout_width="@dimen/download_intercept_popup_app_icon_size" android:layout_height="@dimen/download_intercept_popup_app_icon_size" />
+    <TextView android:textSize="@dimen/download_intercept_grid_item_app_name_text_size" android:textColor="@color/download_intercept_popup_app_name_color" android:ellipsize="marquee" android:gravity="center" android:id="@id/recommend_app_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/download_intercept_grid_item_app_name_margin_top" android:singleLine="true" />
+    <Button android:textSize="@dimen/download_intercept_grid_install_text_size" android:textColor="@color/download_intercept_popup_install_btn_text_color" android:gravity="center" android:id="@id/recommend_app_install" android:background="@drawable/download_intercept_popup_install_btn_background" android:layout_width="match_parent" android:layout_height="@dimen/download_intercept_grid_install_btn_height" android:layout_marginTop="@dimen/download_intercept_grid_install_margin_top" android:text="@string/download_intercept_popup_install" android:textAllCaps="false" />
+</LinearLayout>

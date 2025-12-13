@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10.0dp" />
+    <padding android:left="15.0dp" android:top="3.0dp" android:right="15.0dp" android:bottom="3.0dp" />
+    <solid android:color="@color/news_feed_load_more_view_error_bg_color" />
+</shape>

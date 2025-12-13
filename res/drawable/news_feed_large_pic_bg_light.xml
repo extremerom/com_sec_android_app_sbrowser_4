@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/news_feed_default_pic_bg_color_light" />
+    <corners android:bottomLeftRadius="@dimen/news_feed_large_pic_cover_border_radius" android:bottomRightRadius="@dimen/news_feed_large_pic_cover_border_radius" />
+</shape>

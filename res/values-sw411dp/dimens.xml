@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="iris_preview_height">231.0dp</dimen>
+    <dimen name="iris_ring_inner_radius">66.0dp</dimen>
+    <dimen name="iris_ring_margin">34.19998dp</dimen>
+    <dimen name="iris_ring_size">138.0dp</dimen>
+    <dimen name="iris_ring_thickness">3.399994dp</dimen>
+    <dimen name="preview_icon_ratio_phone">0.161</dimen>
+    <dimen name="qr_scan_height">440.0dp</dimen>
+    <dimen name="qr_scan_margin_top">120.0dp</dimen>
+    <dimen name="qr_scan_min_size">96.0dp</dimen>
+    <dimen name="qr_scan_size">261.0dp</dimen>
+    <dimen name="qr_scan_width">330.0dp</dimen>
+    <dimen name="qr_toast_offset_y">127.0dp</dimen>
+</resources>

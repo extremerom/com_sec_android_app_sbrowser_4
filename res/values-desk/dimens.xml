@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quickaccess_dialog_edit_text_margin_end">36.0dp</dimen>
+    <dimen name="quickaccess_dialog_edit_text_margin_start">30.0dp</dimen>
+    <dimen name="shortcut_edit_icon_view_item_min_column_width">75.0dp</dimen>
+</resources>

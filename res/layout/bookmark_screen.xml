@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/bookmark_screen_root" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/select_folder_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/bookmark_main_layout" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_like_content" android:background="@drawable/video_history_background" android:focusable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:minHeight="@dimen/media_history_view_min_height">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/like_video_ic" android:layout_width="@dimen/history_item_fav_image_width" android:layout_height="@dimen/history_item_fav_image_height" android:src="@drawable/video_tab_menu_like_icon" android:scaleType="fitCenter" android:tint="@color/color_palette_video_history_icon_color" android:layout_marginStart="@dimen/history_favicon_video_margin_start" android:layout_marginEnd="@dimen/history_favicon_video_margin_end" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/history_download_text_size" android:textColor="@color/history_video_view_title_color" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/like_video_view_title" android:paddingTop="@dimen/history_video_view_title_text_padding_top_bottom" android:paddingBottom="@dimen/history_video_view_title_text_padding_top_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="@dimen/history_download_view_title_max_height" android:text="@string/site_video_like_content" android:maxLines="1" android:singleLine="true" android:importantForAccessibility="no" style="@style/RobotoRegular" />
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/folder_navigation_layout" android:background="@drawable/history_item_top_rounded_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <HorizontalScrollView android:id="@id/path_indicator" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="@dimen/show_bookmarks_folder_scroll_view_height" android:layout_marginTop="@dimen/show_bookmarks_folder_scroll_view_margin_top" android:layout_marginBottom="@dimen/show_bookmarks_folder_scroll_view_margin_bottom" android:layout_marginStart="@dimen/show_bookmarks_folder_scroll_view_margin_left" android:layout_marginEnd="@dimen/show_bookmarks_folder_scroll_view_margin_right">
+                    <RelativeLayout android:gravity="center_vertical" android:id="@id/path_indicator_rel_layout" android:layout_width="wrap_content" android:layout_height="match_parent" />
+                </HorizontalScrollView>
+                <View android:id="@id/folder_path_mask" android:focusable="false" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/show_bookmarks_folder_scroll_view_height" android:layout_marginTop="@dimen/show_bookmarks_folder_scroll_view_margin_top" android:layout_marginBottom="@dimen/show_bookmarks_folder_scroll_view_margin_top" android:importantForAccessibility="no" android:layout_marginStart="@dimen/show_bookmarks_folder_scroll_view_margin_left" android:layout_marginEnd="@dimen/show_bookmarks_folder_scroll_view_margin_right" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/listview_holder" android:layout_width="match_parent" android:layout_height="match_parent">
+                <FrameLayout android:id="@id/bookmark_display_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="@integer/history_listview_weight">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/bookmark_folder_normal_list" android:background="@null" android:paddingBottom="@dimen/sites_recycler_view_bottom_padding" android:visibility="visible" android:scrollbars="vertical" android:clipChildren="false" android:clipToPadding="false" android:drawSelectorOnTop="true" android:divider="@null" android:nestedScrollingEnabled="true" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" style="@style/BookmarkListViewStyle" />
+                </FrameLayout>
+                <include android:id="@id/layout_no_bookmarks" layout="@layout/showbookmarks_no_layout" />
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView android:id="@id/placeholder_scrollview" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="true">
+            <View android:id="@id/placeholder" android:background="@color/show_bookmarks_item_selected_bg_color" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

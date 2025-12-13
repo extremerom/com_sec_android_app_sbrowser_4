@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sec.android.app.sbrowser.multi_tab.MultiTabGroupTabsNavigate android:gravity="center_vertical" android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/tab_manager_group_path_height" android:paddingHorizontal="@dimen/tab_manager_group_path_horizontal_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/tab_manager_group_path_text_size" android:textColor="@color/tab_manager_actionbar_normal_mode_title_text_color" android:id="@id/tab_group_list_all_tabs" android:background="@drawable/item_background_dark_ripple" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tab_manager_text_tabs" android:layout_marginEnd="@dimen/tab_manager_group_path_button_text_margin_end" style="@style/RobotoRegular" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/tab_group_list_icon" android:layout_width="@dimen/tab_manager_group_path_img_size" android:layout_height="@dimen/tab_manager_group_path_img_size" android:src="@drawable/ic_player_play" />
+    <HorizontalScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="match_parent" android:importantForAccessibility="no" android:layout_marginStart="@dimen/tab_manager_group_path_text_margin">
+        <TextView android:textSize="@dimen/tab_manager_group_path_text_size" android:textColor="@color/tab_manager_actionbar_normal_mode_title_text_color" android:layout_gravity="center_vertical" android:id="@id/tab_group_list_group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/tab_manager_group_path_text_margin" style="@style/RobotoRegular" />
+    </HorizontalScrollView>
+</com.sec.android.app.sbrowser.multi_tab.MultiTabGroupTabsNavigate>

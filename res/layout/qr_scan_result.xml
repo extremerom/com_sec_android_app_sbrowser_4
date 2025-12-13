@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/qr_scan_result_text_size" android:textColor="@color/qr_scan_result_text_color" android:id="@id/qr_result_textview" android:padding="@dimen/qr_scan_result_text_padding" android:layout_width="match_parent" android:layout_height="match_parent" android:lineSpacingExtra="@dimen/qr_scan_result_text_line_spacing_extra" android:textIsSelectable="true" android:textAlignment="textStart" />
+</RelativeLayout>

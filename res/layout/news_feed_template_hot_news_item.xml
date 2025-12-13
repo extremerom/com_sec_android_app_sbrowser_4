@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/news_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" />
+    <View android:background="@drawable/news_hot_news_item_bg" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/news_title_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/news_feed_hot_news_item_title_margin_bottom" android:maxLines="2" android:shadowColor="@color/hot_news_item_title_text_shadow_color" android:shadowDx="0.0" android:shadowDy="2.0" android:layout_alignParentBottom="true" android:layout_marginHorizontal="@dimen/news_feed_hot_news_item_content_margin_horizontal" style="@style/RobotoMedium" />
+    <include android:id="@id/info_flow_news_sub_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/news_feed_hot_news_item_sub_content_margin_bottom" android:layout_alignParentBottom="true" android:layout_marginHorizontal="@dimen/news_feed_hot_news_item_content_margin_horizontal" layout="@layout/news_feed_template_sub_content" />
+</RelativeLayout>

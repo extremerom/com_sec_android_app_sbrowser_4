@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sec.android.app.sbrowser.multi_cp_native.MultiCPCoordinatorLayout android:id="@id/multicp_native_view" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.sbrowser.multi_cp_native.MultiCPAppBarLayout android:orientation="vertical" android:id="@id/homepage_header_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:seslHide="false" app:seslUseCustomHeight="true" app:seslUseCustomPadding="true" app:seslUseFloatingToolbar="false">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+            <com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.ShortCutView android:orientation="vertical" android:id="@id/quick_access_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="1.0">
+                <com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.ShortCutViewPager android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/shortcut_view_pager" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/shortcut_view_margin_top" android:layout_marginHorizontal="@dimen/shortcut_view_margin_horizontal" />
+                <com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.indicator_view.ViewPagerIndicator android:gravity="center" android:layout_gravity="bottom" android:id="@id/shortcut_viewpage_indicator" android:layout_width="match_parent" android:layout_height="5.0dp" />
+            </com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.ShortCutView>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.sec.android.app.sbrowser.multi_cp_native.MultiCPAppBarLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/homepage_news_feeds_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include android:id="@id/news_channel_tab_layout" layout="@layout/layout_news_channel_bar" />
+        <androidx.viewpager.widget.ViewPager android:id="@id/news_view_pager" android:focusable="false" android:nextFocusUp="@id/news_channel_tab_layout" android:clickable="false" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+</com.sec.android.app.sbrowser.multi_cp_native.MultiCPCoordinatorLayout>

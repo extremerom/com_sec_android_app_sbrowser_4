@@ -1,0 +1,138 @@
+.class public final Landroidx/glance/oneui/template/PermissionTemplateKt;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a\u0017\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0005"
+    }
+    d2 = {
+        "Landroidx/glance/oneui/template/PermissionData;",
+        "data",
+        "Lw8/B;",
+        "PermissionTemplate",
+        "(Landroidx/glance/oneui/template/PermissionData;Landroidx/compose/runtime/Composer;I)V",
+        "glance-oneui-template_release"
+    }
+    k = 0x2
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# direct methods
+.method public static final PermissionTemplate(Landroidx/glance/oneui/template/PermissionData;Landroidx/compose/runtime/Composer;I)V
+    .locals 3
+    .param p0    # Landroidx/glance/oneui/template/PermissionData;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/compose/runtime/Composer;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/compose/runtime/Composable;
+    .end annotation
+
+    .annotation build Landroidx/compose/runtime/ComposableTarget;
+        applier = "androidx.compose.ui.UiComposable"
+    .end annotation
+
+    const-string v0, "data"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/q;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const v0, 0x25d8151c
+
+    invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->startRestartGroup(I)Landroidx/compose/runtime/Composer;
+
+    move-result-object p1
+
+    invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, -0x1
+
+    const-string v2, "androidx.glance.oneui.template.PermissionTemplate (PermissionTemplate.kt:13)"
+
+    invoke-static {v0, p2, v1, v2}, Landroidx/compose/runtime/ComposerKt;->traceEventStart(IIILjava/lang/String;)V
+
+    :cond_0
+    invoke-static {}, Landroidx/glance/oneui/template/CompositionLocalsKt;->getLocalCompositor()Landroidx/compose/runtime/ProvidableCompositionLocal;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->consume(Landroidx/compose/runtime/CompositionLocal;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/glance/oneui/template/TemplateCompositor;->Companion:Landroidx/glance/oneui/template/TemplateCompositor$Companion;
+
+    invoke-virtual {v1}, Landroidx/glance/oneui/template/TemplateCompositor$Companion;->getGlance()Landroidx/glance/oneui/template/TemplateCompositor;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/q;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    if-eqz v0, :cond_1
+
+    const v0, 0x9c1e2b0
+
+    invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->startReplaceableGroup(I)V
+
+    invoke-static {p0, p1, v1}, Landroidx/glance/oneui/template/layout/glance/PermissionLayoutKt;->GlancePermissionLayout(Landroidx/glance/oneui/template/PermissionData;Landroidx/compose/runtime/Composer;I)V
+
+    invoke-interface {p1}, Landroidx/compose/runtime/Composer;->endReplaceableGroup()V
+
+    goto :goto_0
+
+    :cond_1
+    const v0, 0x9c1e2e2
+
+    invoke-interface {p1, v0}, Landroidx/compose/runtime/Composer;->startReplaceableGroup(I)V
+
+    invoke-static {p0, p1, v1}, Landroidx/glance/oneui/template/layout/compose/PermissionLayoutKt;->ComposePermissionLayout(Landroidx/glance/oneui/template/PermissionData;Landroidx/compose/runtime/Composer;I)V
+
+    invoke-interface {p1}, Landroidx/compose/runtime/Composer;->endReplaceableGroup()V
+
+    :goto_0
+    invoke-static {}, Landroidx/compose/runtime/ComposerKt;->isTraceInProgress()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Landroidx/compose/runtime/ComposerKt;->traceEventEnd()V
+
+    :cond_2
+    invoke-interface {p1}, Landroidx/compose/runtime/Composer;->endRestartGroup()Landroidx/compose/runtime/ScopeUpdateScope;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    new-instance v0, Landroidx/glance/oneui/template/PermissionTemplateKt$PermissionTemplate$1;
+
+    invoke-direct {v0, p0, p2}, Landroidx/glance/oneui/template/PermissionTemplateKt$PermissionTemplate$1;-><init>(Landroidx/glance/oneui/template/PermissionData;I)V
+
+    invoke-interface {p1, v0}, Landroidx/compose/runtime/ScopeUpdateScope;->updateScope(LL8/n;)V
+
+    :cond_3
+    return-void
+.end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="edit_shortcut_columns_num">7</integer>
+    <integer name="local_shortcut_columns_num">7</integer>
+    <integer name="quickaccess_num_columns">7</integer>
+    <integer name="selected_channel_columns_num">3</integer>
+</resources>

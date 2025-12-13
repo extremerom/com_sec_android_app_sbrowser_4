@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ai_summarize_popup_options_icon_color">#252528</color>
+    <color name="summary_contents_header_text_color">#252528</color>
+    <color name="summary_contents_header_text_color_black">#e9e9ec</color>
+    <color name="summary_contents_text_color">#010102</color>
+    <color name="summary_split_view_header_text_color">#010102</color>
+</resources>

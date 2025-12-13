@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/news_feed_channel_color"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector android:enterFadeDuration="50" android:exitFadeDuration="100">
+            <item android:state_focused="true" android:drawable="@drawable/channel_item_enable" />
+            <item android:state_pressed="true" android:drawable="@drawable/channel_item_enable" />
+            <item android:state_selected="true" android:drawable="@drawable/channel_item_enable" />
+            <item android:drawable="@drawable/channel_item_enable" android:state_hovered="true" />
+            <item android:state_enabled="false" android:drawable="@drawable/channel_item_normal" />
+            <item android:drawable="@drawable/channel_item_normal" />
+        </selector>
+    </item>
+</ripple>

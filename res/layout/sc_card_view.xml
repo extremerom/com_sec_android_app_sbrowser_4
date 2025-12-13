@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/multi_cp_shape_corner_panel" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dp" android:paddingStart="20.0dp" android:paddingEnd="20.0dp" android:layout_marginStart="10.0dp" android:layout_marginEnd="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.manager.SCCardRecycleView android:id="@id/sc_card_recycle_view" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/sc_manager_empty_view" android:layout_width="match_parent" android:layout_height="100.0dp" android:text="@string/no_editable_shortcut" style="@style/EditPageCenterTextStyle" />
+</LinearLayout>

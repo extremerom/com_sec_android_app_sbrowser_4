@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="preview_icon_ratio_phone">0.147</dimen>
+    <dimen name="sesl_glance_combine_body_medium_linear_progress_height">22.0dp</dimen>
+    <dimen name="sesl_glance_combine_body_medium_linear_progress_vertical_margin">6.0dp</dimen>
+    <dimen name="sesl_glance_combine_primary_large_with_titlebar_circle_padding">@dimen/circle_padding_50</dimen>
+    <dimen name="sesl_glance_combine_primary_large_with_titlebar_circle_size">50.0dp</dimen>
+    <dimen name="sesl_glance_combine_primary_medium_circle_padding">@dimen/circle_padding_40</dimen>
+    <dimen name="sesl_glance_combine_primary_medium_circle_size">40.0dp</dimen>
+    <dimen name="sesl_glance_combine_primary_medium_default_padding">10.0dp</dimen>
+    <dimen name="sesl_glance_combine_primary_small_circle_padding">@dimen/circle_padding_40</dimen>
+    <dimen name="sesl_glance_combine_primary_small_circle_size">40.0dp</dimen>
+    <dimen name="sesl_glance_graph_large_display_text_size">26.0</dimen>
+    <dimen name="sesl_glance_grid_item_small_circle_padding">@dimen/circle_padding_40</dimen>
+    <dimen name="sesl_glance_grid_item_small_circle_size">40.0dp</dimen>
+    <dimen name="sesl_glance_grid_item_with_label_medium_circle_padding">@dimen/circle_padding_40</dimen>
+    <dimen name="sesl_glance_grid_item_with_label_medium_circle_size">40.0dp</dimen>
+    <dimen name="style_graph_large_display_text_size">26.0dp</dimen>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/image_preview_loading" android:visibility="gone" android:layout_width="60.0dp" android:layout_height="60.0dp" />
+    <com.github.chrisbanes.photoview.PhotoView android:id="@id/image_preview_photo_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+</FrameLayout>

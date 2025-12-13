@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sbrowser="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.sbrowser.settings.debug.DebugSwitchPreference android:title="@string/pref_debug_ai_search_enable" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_ai_search_enable" />
+    <com.sec.android.app.sbrowser.settings.debug.DebugSwitchPreference android:title="@string/pref_debug_ai_automation_enable" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_ai_automation_enable" />
+    <com.sec.android.app.sbrowser.settings.debug.DebugListPreference android:entries="@array/ai_search_answer_option" android:title="@string/pref_debug_ai_search_answer_option" android:key="pref_ai_search_answer_option" android:defaultValue="grounding" android:entryValues="@array/ai_search_answer_option" sbrowser:debugDefaultValue="grounding" sbrowser:debugKey="pref_ai_search_answer_option" />
+    <com.sec.android.app.sbrowser.settings.debug.DebugListPreference android:entries="@array/pref_debug_ai_search_select_api" android:title="@string/pref_debug_ai_search_select_api" android:key="pref_debug_ai_search_select_api" android:defaultValue="Perplexity" android:entryValues="@array/pref_debug_ai_search_select_api" sbrowser:debugDefaultValue="Perplexity" sbrowser:debugKey="pref_debug_ai_search_select_api" />
+    <com.sec.android.app.sbrowser.settings.debug.DebugSwitchPreference android:title="@string/pref_debug_ai_search_site_recommendation" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_debug_ai_search_site_recommendation" />
+    <com.sec.android.app.sbrowser.settings.debug.DebugSwitchPreference android:title="@string/pref_debug_ai_search_hide_optional_engines" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_debug_ai_search_hide_optional_engines" />
+</PreferenceScreen>

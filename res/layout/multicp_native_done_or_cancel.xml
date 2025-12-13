@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/custom_action_menu" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/menu_cancel" android:background="@drawable/done_and_cancel_button_ripple_background" android:focusable="true" android:clickable="true" android:layout_margin="@dimen/news_feed_action_menu_button_margin" android:text="@string/cancel" style="@style/DoneAndCancelButtonTextStyle" />
+    <TextView android:id="@id/menu_done" android:background="@drawable/done_and_cancel_button_ripple_background" android:focusable="true" android:clickable="true" android:layout_margin="@dimen/news_feed_action_menu_button_margin" android:text="@string/done" style="@style/DoneAndCancelButtonTextStyle" />
+</LinearLayout>

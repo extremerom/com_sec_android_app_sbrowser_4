@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="match_parent" style="@style/CustomBottomSheet"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/touch_outside" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <FrameLayout android:id="@id/bottom_sheet" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="com.sec.android.app.sbrowser.multi_cp_native.newsfeed.common.DragBarOnlyBottomSheetBehavior">
+        <LinearLayout android:orientation="vertical" android:id="@id/round_view" android:background="@color/news_detail_comments_top_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/news_comments_round_view_margin_top" android:elevation="@dimen/news_comments_bottom_sheet_elevation">
+            <RelativeLayout android:id="@id/header_view" android:background="@color/news_detail_comments_top_bg" android:layout_width="match_parent" android:layout_height="@dimen/news_comments_top_height" android:elevation="@dimen/news_comments_bottom_sheet_elevation">
+                <View android:id="@id/comment_drag_bar" android:background="@drawable/details_news_comment_drag_corners_bg" android:layout_width="36.0dp" android:layout_height="4.0dp" android:layout_marginTop="8.0dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/news_detail_comments_text_color" android:id="@id/comments_count" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dp" android:layout_alignParentBottom="true" android:layout_marginHorizontal="24.0dp" />
+            </RelativeLayout>
+            <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.webview.CommentsWebView android:id="@id/web_view_comments" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="@dimen/news_comments_bottom_sheet_elevation" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

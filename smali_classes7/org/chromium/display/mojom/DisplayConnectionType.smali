@@ -1,0 +1,113 @@
+.class public final Lorg/chromium/display/mojom/DisplayConnectionType;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lorg/chromium/display/mojom/DisplayConnectionType$EnumType;
+    }
+.end annotation
+
+
+# static fields
+.field public static final DISPLAY_CONNECTION_TYPE_DISPLAYPORT:I = 0x20
+
+.field public static final DISPLAY_CONNECTION_TYPE_DVI:I = 0x10
+
+.field public static final DISPLAY_CONNECTION_TYPE_HDMI:I = 0x8
+
+.field public static final DISPLAY_CONNECTION_TYPE_INTERNAL:I = 0x2
+
+.field public static final DISPLAY_CONNECTION_TYPE_NETWORK:I = 0x40
+
+.field public static final DISPLAY_CONNECTION_TYPE_NONE:I = 0x0
+
+.field public static final DISPLAY_CONNECTION_TYPE_UNKNOWN:I = 0x1
+
+.field public static final DISPLAY_CONNECTION_TYPE_VGA:I = 0x4
+
+.field private static final IS_EXTENSIBLE:Z = false
+
+.field public static final MAX_VALUE:I = 0x40
+
+.field public static final MIN_VALUE:I
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static isKnownValue(I)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-eqz p0, :cond_0
+
+    if-eq p0, v0, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_0
+
+    const/4 v1, 0x4
+
+    if-eq p0, v1, :cond_0
+
+    const/16 v1, 0x8
+
+    if-eq p0, v1, :cond_0
+
+    const/16 v1, 0x10
+
+    if-eq p0, v1, :cond_0
+
+    const/16 v1, 0x20
+
+    if-eq p0, v1, :cond_0
+
+    const/16 v1, 0x40
+
+    if-eq p0, v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    return v0
+.end method
+
+.method public static toKnownValue(I)I
+    .locals 0
+
+    return p0
+.end method
+
+.method public static validate(I)V
+    .locals 1
+
+    invoke-static {p0}, Lorg/chromium/display/mojom/DisplayConnectionType;->isKnownValue(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Lorg/chromium/mojo/bindings/DeserializationException;
+
+    const-string v0, "Invalid enum value."
+
+    invoke-direct {p0, v0}, Lorg/chromium/mojo/bindings/DeserializationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method

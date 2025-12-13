@@ -1,0 +1,257 @@
+.class public final Landroidx/compose/runtime/changelist/Operation$TrimParentValues;
+.super Landroidx/compose/runtime/changelist/Operation;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Landroidx/compose/runtime/internal/StabilityInferred;
+    parameters = 0x1
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/compose/runtime/changelist/Operation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "TrimParentValues"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u00c7\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u001a\u0010\t\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J/\u0010\u0012\u001a\u00020\u0011*\u00020\n2\n\u0010\u000c\u001a\u0006\u0012\u0002\u0008\u00030\u000b2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0016\u00a2\u0006\u0004\u0008\u0012\u0010\u0013R\u0018\u0010\u0016\u001a\u00020\u00048\u00c6\u0002\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\u0006\u001a\u0004\u0008\u0014\u0010\u0015\u0082\u0002\u000b\n\u0005\u0008\u00a1\u001e0\u0001\n\u0002\u0008!\u00a8\u0006\u0017"
+    }
+    d2 = {
+        "Landroidx/compose/runtime/changelist/Operation$TrimParentValues;",
+        "Landroidx/compose/runtime/changelist/Operation;",
+        "<init>",
+        "()V",
+        "Landroidx/compose/runtime/changelist/Operation$IntParameter;",
+        "parameter",
+        "",
+        "intParamName-w8GmfQM",
+        "(I)Ljava/lang/String;",
+        "intParamName",
+        "Landroidx/compose/runtime/changelist/OperationArgContainer;",
+        "Landroidx/compose/runtime/Applier;",
+        "applier",
+        "Landroidx/compose/runtime/SlotWriter;",
+        "slots",
+        "Landroidx/compose/runtime/RememberManager;",
+        "rememberManager",
+        "Lw8/B;",
+        "execute",
+        "(Landroidx/compose/runtime/changelist/OperationArgContainer;Landroidx/compose/runtime/Applier;Landroidx/compose/runtime/SlotWriter;Landroidx/compose/runtime/RememberManager;)V",
+        "getCount-jn0FJLE",
+        "()I",
+        "Count",
+        "runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+.field public static final INSTANCE:Landroidx/compose/runtime/changelist/Operation$TrimParentValues;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/compose/runtime/changelist/Operation$TrimParentValues;
+
+    invoke-direct {v0}, Landroidx/compose/runtime/changelist/Operation$TrimParentValues;-><init>()V
+
+    sput-object v0, Landroidx/compose/runtime/changelist/Operation$TrimParentValues;->INSTANCE:Landroidx/compose/runtime/changelist/Operation$TrimParentValues;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 4
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v2, v3, v0, v1}, Landroidx/compose/runtime/changelist/Operation;-><init>(IIILkotlin/jvm/internal/i;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public execute(Landroidx/compose/runtime/changelist/OperationArgContainer;Landroidx/compose/runtime/Applier;Landroidx/compose/runtime/SlotWriter;Landroidx/compose/runtime/RememberManager;)V
+    .locals 4
+    .param p1    # Landroidx/compose/runtime/changelist/OperationArgContainer;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/compose/runtime/Applier;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/compose/runtime/SlotWriter;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/compose/runtime/RememberManager;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/compose/runtime/changelist/OperationArgContainer;",
+            "Landroidx/compose/runtime/Applier<",
+            "*>;",
+            "Landroidx/compose/runtime/SlotWriter;",
+            "Landroidx/compose/runtime/RememberManager;",
+            ")V"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Landroidx/compose/runtime/changelist/Operation$IntParameter;->constructor-impl(I)I
+
+    move-result p0
+
+    invoke-interface {p1, p0}, Landroidx/compose/runtime/changelist/OperationArgContainer;->getInt-w8GmfQM(I)I
+
+    move-result p0
+
+    invoke-virtual {p3}, Landroidx/compose/runtime/SlotWriter;->getSlotsSize()I
+
+    move-result p1
+
+    invoke-virtual {p3}, Landroidx/compose/runtime/SlotWriter;->getParent()I
+
+    move-result p2
+
+    invoke-virtual {p3, p2}, Landroidx/compose/runtime/SlotWriter;->slotsStartIndex$runtime_release(I)I
+
+    move-result v0
+
+    invoke-virtual {p3, p2}, Landroidx/compose/runtime/SlotWriter;->slotsEndIndex$runtime_release(I)I
+
+    move-result p2
+
+    sub-int v1, p2, p0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    :goto_0
+    if-ge v0, p2, :cond_2
+
+    invoke-static {p3}, Landroidx/compose/runtime/SlotWriter;->access$getSlots$p(Landroidx/compose/runtime/SlotWriter;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {p3, v0}, Landroidx/compose/runtime/SlotWriter;->access$dataIndexToDataAddress(Landroidx/compose/runtime/SlotWriter;I)I
+
+    move-result v2
+
+    aget-object v1, v1, v2
+
+    instance-of v2, v1, Landroidx/compose/runtime/RememberObserverHolder;
+
+    if-eqz v2, :cond_0
+
+    sub-int v2, p1, v0
+
+    check-cast v1, Landroidx/compose/runtime/RememberObserverHolder;
+
+    invoke-virtual {v1}, Landroidx/compose/runtime/RememberObserverHolder;->getWrapped()Landroidx/compose/runtime/RememberObserver;
+
+    move-result-object v1
+
+    const/4 v3, -0x1
+
+    invoke-interface {p4, v1, v2, v3, v3}, Landroidx/compose/runtime/RememberManager;->forgetting(Landroidx/compose/runtime/RememberObserver;III)V
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v2, v1, Landroidx/compose/runtime/RecomposeScopeImpl;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Landroidx/compose/runtime/RecomposeScopeImpl;
+
+    invoke-virtual {v1}, Landroidx/compose/runtime/RecomposeScopeImpl;->release()V
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p3, p0}, Landroidx/compose/runtime/SlotWriter;->trimTailSlots(I)V
+
+    return-void
+.end method
+
+.method public final getCount-jn0FJLE()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Landroidx/compose/runtime/changelist/Operation$IntParameter;->constructor-impl(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public intParamName-w8GmfQM(I)Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Landroidx/compose/runtime/changelist/Operation$IntParameter;->constructor-impl(I)I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Landroidx/compose/runtime/changelist/Operation$IntParameter;->equals-impl0(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string p0, "count"
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1}, Landroidx/compose/runtime/changelist/Operation;->intParamName-w8GmfQM(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_0
+    return-object p0
+.end method

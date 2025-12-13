@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:focusable="false" android:clickable="false" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="@dimen/news_feed_refresh_load_more_view_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/pb" style="@style/RefreshProgressBarStyle" />
+    <TextView android:ellipsize="end" android:id="@id/tv_refresh" android:background="@drawable/refresh_tv_bg" android:visibility="gone" android:maxLines="1" style="@style/RefreshViewTextStyle" />
+</LinearLayout>

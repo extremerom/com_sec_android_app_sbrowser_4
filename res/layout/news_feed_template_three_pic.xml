@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/NewContentLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/news_title_tv" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/NewsContent2LineText" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/news_img_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/news_feed_item_image_margin_top">
+        <ImageView android:id="@id/news_content_img_1" style="@style/NewContentImageThreePic" />
+        <ImageView android:id="@id/news_content_img_2" android:layout_marginStart="@dimen/news_feed_item_image_margin_start" style="@style/NewContentImageThreePic" />
+        <ImageView android:id="@id/news_content_img_3" android:layout_marginStart="@dimen/news_feed_item_image_margin_start" style="@style/NewContentImageThreePic" />
+    </LinearLayout>
+    <include android:id="@id/info_flow_news_sub_content" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/news_feed_template_sub_content" />
+</LinearLayout>

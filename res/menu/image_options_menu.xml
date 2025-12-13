@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/contextmenu_for_detail_page_group">
+        <item android:id="@id/download_image" android:title="@string/contextmenu_download_image" />
+        <item android:id="@id/share_image" android:title="@string/contextmenu_share_image" />
+        <item android:id="@id/contextmenu_copy_image" android:title="@string/contextmenu_copy_image" />
+        <item android:id="@id/contextmenu_image_divider" android:title="divider" />
+        <item android:icon="@drawable/ic_image_toolkit" android:id="@id/contextmenu_drawing_assist" android:title="@string/contextmenu_drawing_assist" android:showAsAction="always|withText" />
+    </group>
+</menu>

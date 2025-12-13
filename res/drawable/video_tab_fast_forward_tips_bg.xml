@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/multi_cp_native_main_tab_ripple_radius" />
+    <solid android:color="@color/video_tab_fast_forward_tips_bg_Color" />
+</shape>

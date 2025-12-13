@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shortcut_item_ripple_background" android:focusable="true" android:clickable="true" android:longClickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/inner_container" android:clickable="false" android:layout_width="@dimen/shortcut_icon_width" android:layout_height="@dimen/shortcut_icon_heigth" android:layout_marginTop="9.0dp" android:importantForAccessibility="noHideDescendants">
+        <com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.base.SquacleImageView android:id="@id/shorcut_item_icon" android:focusable="false" android:clickable="false" android:layout_width="@dimen/shortcut_icon_img_length" android:layout_height="@dimen/shortcut_icon_img_length" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/shortcut_icon_tv_size" android:textColor="@color/shortcut_icon_view_item_title_text_color" android:ellipsize="end" android:gravity="center|top" android:layout_gravity="center" android:id="@id/shorcut_item_tv" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:maxLines="2" android:minLines="2" android:layout_marginHorizontal="2.0dp" style="@style/RobotoRegular" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/internet_ic_move" android:id="@id/bottom_bar_move" android:title="@string/show_bookmarks_move_command" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_edit" android:id="@id/bottom_bar_rename" android:title="@string/show_bookmarks_rename_command" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_edit" android:id="@id/bottom_bar_edit" android:title="@string/show_bookmarks_action_bar_edit" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_share_point_3_connected_dotted" android:id="@id/bottom_bar_share" android:title="@string/action_share" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_delete" android:id="@id/bottom_bar_delete" android:title="@string/action_delete" app:showAsAction="always" />
+</menu>

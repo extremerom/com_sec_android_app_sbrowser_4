@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/internet_ic_share" android:id="@id/bottom_navigation_share_button" android:title="@string/action_share" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_edit" android:id="@id/bottom_navigation_rename_button" android:title="@string/action_rename" app:showAsAction="always" />
+    <item android:icon="@drawable/download_history_move_icon" android:id="@id/bottom_navigation_retry_button" android:title="@string/retry" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_delete" android:id="@id/bottom_navigation_delete_button" android:title="@string/action_delete_from_download_history" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_retry" android:id="@id/bottom_navigation_move_button" android:title="@string/download_history_move_out" app:showAsAction="always" />
+    <item android:icon="@drawable/internet_ic_delete" android:id="@id/bottom_navigation_remove_from_history_button" android:title="@string/download_history_remove_files" app:showAsAction="always" />
+</menu>

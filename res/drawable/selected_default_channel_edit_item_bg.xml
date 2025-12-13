@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="15.0dp" />
+    <padding android:left="1.0dp" android:top="1.0dp" android:right="1.0dp" android:bottom="1.0dp" />
+    <solid android:color="@color/news_feed_selected_channel_night" />
+</shape>

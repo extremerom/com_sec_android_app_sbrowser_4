@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sec.android.app.sbrowser.multi_cp_native.shortcut.ui.icon_view.ShortCutIconGridView android:gravity="center" android:id="@id/shortcut_gridview" android:layout_width="match_parent" android:layout_height="0.0dp" android:listSelector="@drawable/shortcut_item_ripple_background"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="@dimen/select_city_list_round_corner_radius" android:topRightRadius="@dimen/select_city_list_round_corner_radius" />
+    <solid android:color="@color/select_city_view_city_list_item_bg_color" />
+</shape>

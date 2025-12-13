@@ -1,0 +1,803 @@
+.class public Lcom/bytedance/pangle/FileProvider;
+.super Landroid/content/ContentProvider;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bytedance/pangle/FileProvider$b;,
+        Lcom/bytedance/pangle/FileProvider$a;
+    }
+.end annotation
+
+
+# static fields
+.field private static final a:[Ljava/lang/String;
+
+.field private static final b:Ljava/io/File;
+
+.field private static c:Lcom/bytedance/pangle/FileProvider$a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "_display_name"
+
+    const-string v1, "_size"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/bytedance/pangle/FileProvider;->a:[Ljava/lang/String;
+
+    new-instance v0, Ljava/io/File;
+
+    const-string v1, "/"
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/bytedance/pangle/FileProvider;->b:Ljava/io/File;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
+
+    return-void
+.end method
+
+.method private static varargs a(Ljava/io/File;[Ljava/lang/String;)Ljava/io/File;
+    .locals 4
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-gtz v1, :cond_1
+
+    aget-object v2, p1, v0
+
+    if-eqz v2, :cond_0
+
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    move-object p0, v3
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public static a(Lcom/bytedance/pangle/plugin/Plugin;Landroid/content/res/XmlResourceParser;)V
+    .locals 8
+
+    :try_start_0
+    iget-object v0, p0, Lcom/bytedance/pangle/plugin/Plugin;->mPkgName:Ljava/lang/String;
+
+    invoke-static {}, Lcom/bytedance/pangle/Zeus;->getAppApplication()Landroid/app/Application;
+
+    move-result-object v1
+
+    iget-object p0, p0, Lcom/bytedance/pangle/plugin/Plugin;->mPkgName:Ljava/lang/String;
+
+    invoke-static {v1, p0}, Lcom/bytedance/pangle/transform/ZeusTransformUtils;->wrapperContext(Ljava/lang/Object;Ljava/lang/String;)Landroid/content/Context;
+
+    move-result-object p0
+
+    sget-object v1, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    check-cast v1, Lcom/bytedance/pangle/FileProvider$b;
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_8
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_0
+
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "name"
+
+    const/4 v4, 0x0
+
+    invoke-interface {p1, v4, v3}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v5, "path"
+
+    invoke-interface {p1, v4, v5}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "root-path"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    sget-object v4, Lcom/bytedance/pangle/FileProvider;->b:Ljava/io/File;
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    goto/16 :goto_2
+
+    :cond_1
+    const-string v6, "files-path"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_2
+    const-string v6, "cache-path"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_3
+    const-string v6, "external-files-path"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    const/4 v7, 0x0
+
+    if-eqz v6, :cond_4
+
+    invoke-virtual {p0, v4}, Landroid/content/Context;->getExternalFilesDirs(Ljava/lang/String;)[Ljava/io/File;
+
+    move-result-object v2
+
+    array-length v6, v2
+
+    if-lez v6, :cond_6
+
+    aget-object v4, v2, v7
+
+    goto :goto_1
+
+    :cond_4
+    const-string v6, "external-cache-path"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-virtual {p0}, Landroid/content/Context;->getExternalCacheDirs()[Ljava/io/File;
+
+    move-result-object v2
+
+    array-length v6, v2
+
+    if-lez v6, :cond_6
+
+    aget-object v4, v2, v7
+
+    goto :goto_1
+
+    :cond_5
+    const-string v6, "external-media-path"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    invoke-virtual {p0}, Landroid/content/Context;->getExternalMediaDirs()[Ljava/io/File;
+
+    move-result-object v2
+
+    array-length v6, v2
+
+    if-lez v6, :cond_6
+
+    aget-object v4, v2, v7
+
+    :cond_6
+    :goto_1
+    if-eqz v4, :cond_0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, "_"
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    filled-new-array {v5}, [Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Lcom/bytedance/pangle/FileProvider;->a(Ljava/io/File;[Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v3
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-nez v4, :cond_7
+
+    :try_start_1
+    invoke-virtual {v3}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
+
+    move-result-object v3
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :try_start_2
+    iget-object v4, v1, Lcom/bytedance/pangle/FileProvider$b;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v4, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto/16 :goto_0
+
+    :catch_1
+    move-exception p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Failed to resolve canonical path for "
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :cond_7
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Name must not be empty"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :cond_8
+    return-void
+
+    :goto_2
+    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    return-void
+.end method
+
+.method public static getUriForFile(Ljava/io/File;)Landroid/net/Uri;
+    .locals 1
+    .param p0    # Ljava/io/File;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
+    sget-object v0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    invoke-interface {v0, p0}, Lcom/bytedance/pangle/FileProvider$a;->a(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
+    .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/pm/ProviderInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
+
+    iget-boolean p0, p2, Landroid/content/pm/ProviderInfo;->exported:Z
+
+    if-nez p0, :cond_2
+
+    iget-boolean p0, p2, Landroid/content/pm/ProviderInfo;->grantUriPermissions:Z
+
+    if-eqz p0, :cond_1
+
+    sget-object p0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    if-nez p0, :cond_0
+
+    new-instance p0, Lcom/bytedance/pangle/FileProvider$b;
+
+    iget-object p1, p2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+
+    invoke-direct {p0, p1}, Lcom/bytedance/pangle/FileProvider$b;-><init>(Ljava/lang/String;)V
+
+    sput-object p0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/SecurityException;
+
+    const-string/jumbo p1, "\u4ec5\u5141\u8bb8\u5b9a\u4e49\u4e00\u4e2aFileProvider"
+
+    invoke-direct {p0, p1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/SecurityException;
+
+    const-string p1, "Provider must grant uri permissions"
+
+    invoke-direct {p0, p1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/SecurityException;
+
+    const-string p1, "Provider must not be exported"
+
+    invoke-direct {p0, p1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
+    .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    sget-object p0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    invoke-interface {p0, p1}, Lcom/bytedance/pangle/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public getType(Landroid/net/Uri;)Ljava/lang/String;
+    .locals 1
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    sget-object p0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    invoke-interface {p0, p1}, Lcom/bytedance/pangle/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/16 v0, 0x2e
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result p1
+
+    if-ltz p1, :cond_0
+
+    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    add-int/lit8 p1, p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "application/octet-stream"
+
+    return-object p0
+.end method
+
+.method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+    .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "No external inserts"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public onCreate()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+    .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    sget-object p0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    invoke-interface {p0, p1}, Lcom/bytedance/pangle/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
+
+    move-result-object p0
+
+    const-string p1, "r"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/high16 p1, 0x10000000
+
+    goto :goto_1
+
+    :cond_0
+    const-string p1, "w"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    const-string/jumbo p1, "wt"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "wa"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/high16 p1, 0x2a000000
+
+    goto :goto_1
+
+    :cond_2
+    const-string p1, "rw"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    const/high16 p1, 0x38000000
+
+    goto :goto_1
+
+    :cond_3
+    const-string p1, "rwt"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    const/high16 p1, 0x3c000000    # 0.0078125f
+
+    goto :goto_1
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "Invalid mode: "
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_5
+    :goto_0
+    const/high16 p1, 0x2c000000
+
+    :goto_1
+    invoke-static {p0, p1}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    .locals 5
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    sget-object p0, Lcom/bytedance/pangle/FileProvider;->c:Lcom/bytedance/pangle/FileProvider$a;
+
+    invoke-interface {p0, p1}, Lcom/bytedance/pangle/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
+
+    move-result-object p0
+
+    if-nez p2, :cond_0
+
+    sget-object p2, Lcom/bytedance/pangle/FileProvider;->a:[Ljava/lang/String;
+
+    :cond_0
+    array-length p1, p2
+
+    new-array p1, p1, [Ljava/lang/String;
+
+    array-length p3, p2
+
+    new-array p3, p3, [Ljava/lang/Object;
+
+    array-length p4, p2
+
+    const/4 p5, 0x0
+
+    move v0, p5
+
+    move v1, v0
+
+    :goto_0
+    if-ge v0, p4, :cond_3
+
+    aget-object v2, p2, v0
+
+    const-string v3, "_display_name"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    aput-object v3, p1, v1
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, p3, v1
+
+    :goto_1
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_1
+    const-string v3, "_size"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    aput-object v3, p1, v1
+
+    add-int/lit8 v2, v1, 0x1
+
+    invoke-virtual {p0}, Ljava/io/File;->length()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    aput-object v3, p3, v1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    new-array p0, v1, [Ljava/lang/String;
+
+    invoke-static {p1, p5, p0, p5, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    new-array p1, v1, [Ljava/lang/Object;
+
+    invoke-static {p3, p5, p1, p5, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    new-instance p2, Landroid/database/MatrixCursor;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p0, p3}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;I)V
+
+    invoke-virtual {p2, p1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+
+    return-object p2
+.end method
+
+.method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "No external updates"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method

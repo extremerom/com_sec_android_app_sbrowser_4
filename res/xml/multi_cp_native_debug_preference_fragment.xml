@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sbrowser="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/channel_rule_Location" android:key="pref_channel_rule_local" android:summary="@string/channel_rule_from_global_config" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_channel_rule_local" />
+</PreferenceScreen>

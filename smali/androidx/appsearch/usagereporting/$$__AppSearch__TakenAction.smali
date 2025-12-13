@@ -1,0 +1,199 @@
+.class public final Landroidx/appsearch/usagereporting/$$__AppSearch__TakenAction;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroidx/appsearch/app/DocumentClassFactory;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroidx/appsearch/app/DocumentClassFactory<",
+        "Landroidx/appsearch/usagereporting/TakenAction;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final SCHEMA_NAME:Ljava/lang/String; = "builtin:TakenAction"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public fromGenericDocument(Landroidx/appsearch/app/GenericDocument;Landroidx/appsearch/app/DocumentClassMappingContext;)Landroidx/appsearch/usagereporting/TakenAction;
+    .locals 8
+
+    invoke-virtual {p1}, Landroidx/appsearch/app/GenericDocument;->getNamespace()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Landroidx/appsearch/app/GenericDocument;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroidx/appsearch/app/GenericDocument;->getTtlMillis()J
+
+    move-result-wide v6
+
+    invoke-virtual {p1}, Landroidx/appsearch/app/GenericDocument;->getCreationTimestampMillis()J
+
+    move-result-wide v3
+
+    const-string p0, "actionType"
+
+    invoke-virtual {p1, p0}, Landroidx/appsearch/app/GenericDocument;->getPropertyLong(Ljava/lang/String;)J
+
+    move-result-wide p0
+
+    long-to-int v5, p0
+
+    new-instance p0, Landroidx/appsearch/usagereporting/TakenAction$Builder;
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Landroidx/appsearch/usagereporting/TakenAction$Builder;-><init>(Ljava/lang/String;Ljava/lang/String;JI)V
+
+    invoke-virtual {p0, v6, v7}, Landroidx/appsearch/usagereporting/TakenAction$BuilderImpl;->setDocumentTtlMillis(J)Landroidx/appsearch/usagereporting/TakenAction$BuilderImpl;
+
+    invoke-virtual {p0}, Landroidx/appsearch/usagereporting/TakenAction$BuilderImpl;->build()Landroidx/appsearch/usagereporting/TakenAction;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic fromGenericDocument(Landroidx/appsearch/app/GenericDocument;Landroidx/appsearch/app/DocumentClassMappingContext;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroidx/appsearch/usagereporting/$$__AppSearch__TakenAction;->fromGenericDocument(Landroidx/appsearch/app/GenericDocument;Landroidx/appsearch/app/DocumentClassMappingContext;)Landroidx/appsearch/usagereporting/TakenAction;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getDependencyDocumentClasses()Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Class<",
+            "*>;>;"
+        }
+    .end annotation
+
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getSchema()Landroidx/appsearch/app/AppSearchSchema;
+    .locals 3
+
+    new-instance p0, Landroidx/appsearch/app/AppSearchSchema$Builder;
+
+    const-string v0, "builtin:TakenAction"
+
+    invoke-direct {p0, v0}, Landroidx/appsearch/app/AppSearchSchema$Builder;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "actionType"
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2, p0}, Landroidx/appcompat/graphics/drawable/a;->g(Ljava/lang/String;IILandroidx/appsearch/app/AppSearchSchema$Builder;)Landroidx/appsearch/app/AppSearchSchema;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getSchemaName()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "builtin:TakenAction"
+
+    return-object p0
+.end method
+
+.method public toGenericDocument(Landroidx/appsearch/usagereporting/TakenAction;)Landroidx/appsearch/app/GenericDocument;
+    .locals 3
+
+    new-instance p0, Landroidx/appsearch/app/GenericDocument$Builder;
+
+    invoke-virtual {p1}, Landroidx/appsearch/usagereporting/TakenAction;->getNamespace()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroidx/appsearch/usagereporting/TakenAction;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "builtin:TakenAction"
+
+    invoke-direct {p0, v0, v1, v2}, Landroidx/appsearch/app/GenericDocument$Builder;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroidx/appsearch/usagereporting/TakenAction;->getDocumentTtlMillis()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Landroidx/appsearch/app/GenericDocument$Builder;->setTtlMillis(J)Landroidx/appsearch/app/GenericDocument$Builder;
+
+    invoke-virtual {p1}, Landroidx/appsearch/usagereporting/TakenAction;->getActionTimestampMillis()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Landroidx/appsearch/app/GenericDocument$Builder;->setCreationTimestampMillis(J)Landroidx/appsearch/app/GenericDocument$Builder;
+
+    invoke-virtual {p1}, Landroidx/appsearch/usagereporting/TakenAction;->getActionType()I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [J
+
+    const/4 v2, 0x0
+
+    aput-wide v0, p1, v2
+
+    const-string v0, "actionType"
+
+    invoke-virtual {p0, v0, p1}, Landroidx/appsearch/app/GenericDocument$Builder;->setPropertyLong(Ljava/lang/String;[J)Landroidx/appsearch/app/GenericDocument$Builder;
+
+    invoke-virtual {p0}, Landroidx/appsearch/app/GenericDocument$Builder;->build()Landroidx/appsearch/app/GenericDocument;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic toGenericDocument(Ljava/lang/Object;)Landroidx/appsearch/app/GenericDocument;
+    .locals 0
+
+    check-cast p1, Landroidx/appsearch/usagereporting/TakenAction;
+
+    invoke-virtual {p0, p1}, Landroidx/appsearch/usagereporting/$$__AppSearch__TakenAction;->toGenericDocument(Landroidx/appsearch/usagereporting/TakenAction;)Landroidx/appsearch/app/GenericDocument;
+
+    move-result-object p0
+
+    return-object p0
+.end method

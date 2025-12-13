@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout style="@style/NewContentLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/news_title_tv" app:layout_constraintBottom_toTopOf="@id/tt_ad_video" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/NewsContent2LineText" />
+    <androidx.cardview.widget.CardView android:id="@id/tt_ad_video" android:layout_width="match_parent" android:layout_height="200.0dp" android:layout_marginTop="8.0dp" android:scaleType="centerCrop" android:alpha="@dimen/news_feed_image_alpha" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="8.0dp" app:cardElevation="0.0dp" app:layout_constraintBottom_toTopOf="@id/info_flow_news_sub_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/news_title_tv" />
+    <include android:id="@id/info_flow_news_sub_content" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tt_ad_video" layout="@layout/news_feed_template_sub_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

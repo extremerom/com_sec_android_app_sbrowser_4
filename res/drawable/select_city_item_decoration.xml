@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/news_feed_item_decoration_height" />
+    <solid android:color="@color/select_city_item_decoration_color" />
+</shape>

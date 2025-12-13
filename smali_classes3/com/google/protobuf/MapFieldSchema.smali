@@ -1,0 +1,34 @@
+.class interface abstract Lcom/google/protobuf/MapFieldSchema;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lcom/google/protobuf/CheckReturnValue;
+.end annotation
+
+
+# virtual methods
+.method public abstract a()Lcom/google/protobuf/MapFieldLite;
+.end method
+
+.method public abstract forMapData(Ljava/lang/Object;)Lcom/google/protobuf/MapFieldLite;
+.end method
+
+.method public abstract forMapMetadata(Ljava/lang/Object;)Lcom/google/protobuf/MapEntryLite$Metadata;
+.end method
+
+.method public abstract forMutableMapData(Ljava/lang/Object;)Lcom/google/protobuf/MapFieldLite;
+.end method
+
+.method public abstract getSerializedSize(ILjava/lang/Object;Ljava/lang/Object;)I
+.end method
+
+.method public abstract isImmutable(Ljava/lang/Object;)Z
+.end method
+
+.method public abstract mergeFrom(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/protobuf/MapFieldLite;
+.end method
+
+.method public abstract toImmutable(Ljava/lang/Object;)Ljava/lang/Object;
+.end method

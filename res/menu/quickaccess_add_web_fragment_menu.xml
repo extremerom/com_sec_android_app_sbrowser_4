@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/quickaccess_add_web_fragment_menu_cancel" android:visible="true" android:title="@string/cancel" android:showAsAction="always" />
+    <item android:id="@id/quickaccess_add_web_fragment_menu_save" android:visible="true" android:title="@string/save" android:showAsAction="always" />
+</menu>

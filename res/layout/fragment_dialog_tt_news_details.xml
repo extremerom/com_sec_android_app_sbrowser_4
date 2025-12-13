@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/newsDetailView" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/add_web_background_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentBottom="true">
+        <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news_details.NestedScrollingContainer android:orientation="vertical" android:id="@id/nsc_container" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news_details.NestedDetailWebView android:id="@id/wv_news_details" android:tag="nested_scroll_webview" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news_details.InfiniteFeedsRecyclerView android:id="@id/rv_tt_ad" android:tag="nested_scroll_recyclerview" android:background="@color/add_web_background_color" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingHorizontal="10.0dp" />
+        </com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news_details.NestedScrollingContainer>
+        <ViewStub android:orientation="horizontal" android:id="@id/image_preview_view_stub" android:visibility="gone" android:layout="@layout/layout_image_preview" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </FrameLayout>
+    <include android:id="@id/newdetail_tab_toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/cn_tab_toolbar" />
+    <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news_details.DetailWebErrorLayout android:id="@id/detail_web_error_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/newdetail_tab_toolbar" />
+    <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news_details.comment.DetailCommentView android:id="@id/detail_comment_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ViewStub android:orientation="horizontal" android:id="@id/split_view_stub" android:visibility="gone" android:layout="@layout/split_view_container" android:layout_width="@dimen/match_parent" android:layout_height="match_parent" android:layout_alignParentEnd="true" />
+    <ViewStub android:orientation="horizontal" android:id="@id/split_view_stub_v2" android:visibility="gone" android:layout="@layout/split_view_container_v2" android:layout_width="@dimen/match_parent" android:layout_height="match_parent" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,3 @@
+{
+  "SEND_INSTANT_APP_ALLOW_LIST": "com.samsung.sdk.clickstreamanalytics.sampleApp,com.samsung.android.app.sreminder,com.samsung.android.sm_cn,com.samsung.android.pushservice,com.samsung.android.bixbytouch"
+}

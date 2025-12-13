@@ -1,0 +1,10 @@
+**Primary Directive: Language Handling**
+
+1. **Crucially, the text for the "answer" value MUST be written in the following language: {language}**
+2.  **(Optional) Detect Language:** If there's no language info in No.1, identify the language of the text within the `<User Input>`.
+2.  **Match Output Language:** Your entire final output (the JSON and the questions within it) **must** be in the language detected in step 1 or 2. For example, if the `<User Input>` is in Korean, all generated questions must be in Korean.
+
+---
+
+**[USER QUERY]**
+%s

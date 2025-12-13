@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/diy_shortcut_view" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/input_title" android:focusable="false" android:visibility="gone" android:clickable="true" style="@style/ShortCutDIYSubTitleTextStyle" />
+    <LinearLayout android:id="@id/input_edittext_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatEditText android:ellipsize="end" android:id="@id/input_edittext" android:singleLine="true" android:textCursorDrawable="@drawable/quickaccess_dialog_edit_text_cursor" style="@style/ShortCutDIYEditTextStyle" />
+    </LinearLayout>
+    <TextView android:id="@id/warning_tips_text_view" android:visibility="invisible" style="@style/ShortCutDIYWarningTextStyle" />
+</merge>

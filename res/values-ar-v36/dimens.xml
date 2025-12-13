@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottombar_multiwindow_count_padding_bottom">2.0dp</dimen>
+</resources>

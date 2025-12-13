@@ -1,0 +1,300 @@
+.class public final Lcom/tencent/mm/sdk/diffdev/a/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/mm/sdk/diffdev/IDiffDevOAuth;
+
+
+# instance fields
+.field private ac:Lcom/tencent/mm/sdk/b/d;
+
+.field private ad:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/tencent/mm/sdk/diffdev/OAuthListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private ae:Lcom/tencent/mm/sdk/diffdev/a/d;
+
+.field private af:Lcom/tencent/mm/sdk/diffdev/OAuthListener;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ac:Lcom/tencent/mm/sdk/b/d;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    new-instance v0, Lcom/tencent/mm/sdk/diffdev/a/b;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/diffdev/a/b;-><init>(Lcom/tencent/mm/sdk/diffdev/a/a;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->af:Lcom/tencent/mm/sdk/diffdev/OAuthListener;
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/tencent/mm/sdk/diffdev/a/a;)Ljava/util/List;
+    .locals 0
+
+    iget-object p0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public static synthetic b(Lcom/tencent/mm/sdk/diffdev/a/a;)Lcom/tencent/mm/sdk/b/d;
+    .locals 0
+
+    iget-object p0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ac:Lcom/tencent/mm/sdk/b/d;
+
+    return-object p0
+.end method
+
+.method public static synthetic c(Lcom/tencent/mm/sdk/diffdev/a/a;)Lcom/tencent/mm/sdk/diffdev/a/d;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ae:Lcom/tencent/mm/sdk/diffdev/a/d;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final addListener(Lcom/tencent/mm/sdk/diffdev/OAuthListener;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final auth(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/sdk/diffdev/OAuthListener;)Z
+    .locals 11
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    const-string v1, "start auth, appId = "
+
+    const-string v4, "MicroMsg.SDK.DiffDevOAuth"
+
+    invoke-static {v1, p1, v4}, LJ7/b;->C(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v8, 0x0
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_3
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-gtz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lcom/tencent/mm/sdk/diffdev/a/a;->ac:Lcom/tencent/mm/sdk/b/d;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lcom/tencent/mm/sdk/b/d;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v5
+
+    invoke-direct {v1, v5}, Lcom/tencent/mm/sdk/b/d;-><init>(Landroid/os/Looper;)V
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/diffdev/a/a;->ac:Lcom/tencent/mm/sdk/b/d;
+
+    :cond_1
+    move-object/from16 v1, p6
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/sdk/diffdev/a/a;->addListener(Lcom/tencent/mm/sdk/diffdev/OAuthListener;)V
+
+    iget-object v1, v0, Lcom/tencent/mm/sdk/diffdev/a/a;->ae:Lcom/tencent/mm/sdk/diffdev/a/d;
+
+    const/4 v9, 0x1
+
+    if-eqz v1, :cond_2
+
+    const-string v0, "auth, already running, no need to start auth again"
+
+    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v9
+
+    :cond_2
+    new-instance v10, Lcom/tencent/mm/sdk/diffdev/a/d;
+
+    iget-object v7, v0, Lcom/tencent/mm/sdk/diffdev/a/a;->af:Lcom/tencent/mm/sdk/diffdev/OAuthListener;
+
+    move-object v1, v10
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object/from16 v6, p5
+
+    invoke-direct/range {v1 .. v7}, Lcom/tencent/mm/sdk/diffdev/a/d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/sdk/diffdev/OAuthListener;)V
+
+    iput-object v10, v0, Lcom/tencent/mm/sdk/diffdev/a/a;->ae:Lcom/tencent/mm/sdk/diffdev/a/d;
+
+    sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
+
+    new-array v1, v8, [Ljava/lang/Void;
+
+    invoke-virtual {v10, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    return v9
+
+    :cond_3
+    :goto_0
+    const-string v0, "auth fail, invalid argument, appId = "
+
+    const-string v1, ", scope = "
+
+    invoke-static {v0, p1, v1, p2, v4}, Lf/a;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return v8
+.end method
+
+.method public final detach()V
+    .locals 2
+
+    const-string v0, "MicroMsg.SDK.DiffDevOAuth"
+
+    const-string v1, "detach"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    invoke-virtual {p0}, Lcom/tencent/mm/sdk/diffdev/a/a;->stopAuth()Z
+
+    return-void
+.end method
+
+.method public final removeAllListeners()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    invoke-interface {p0}, Ljava/util/List;->clear()V
+
+    return-void
+.end method
+
+.method public final removeListener(Lcom/tencent/mm/sdk/diffdev/OAuthListener;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ad:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final stopAuth()Z
+    .locals 4
+
+    const-string v0, "stopAuth"
+
+    const-string v1, "MicroMsg.SDK.DiffDevOAuth"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :try_start_0
+    iget-object v0, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ae:Lcom/tencent/mm/sdk/diffdev/a/d;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/diffdev/a/d;->q()Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "stopAuth fail, ex = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    :goto_0
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/tencent/mm/sdk/diffdev/a/a;->ae:Lcom/tencent/mm/sdk/diffdev/a/d;
+
+    return v0
+.end method

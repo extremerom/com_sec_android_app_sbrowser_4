@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="media_player_feature_bottom_layout_padding_top">30.0dp</dimen>
+    <dimen name="media_player_progressbar_margin">80.0dp</dimen>
+    <dimen name="qr_scan_margin_top">80.0dp</dimen>
+</resources>

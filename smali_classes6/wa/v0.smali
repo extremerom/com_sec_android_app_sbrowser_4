@@ -1,0 +1,88 @@
+.class public final Lwa/v0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lsa/c;
+
+
+# static fields
+.field public static final a:Lwa/v0;
+
+.field public static final b:Lwa/G;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lwa/v0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lwa/v0;->a:Lwa/v0;
+
+    sget-object v0, Lwa/i;->a:Lwa/i;
+
+    const-string v1, "kotlin.UByte"
+
+    invoke-static {v1, v0}, Lwa/b0;->a(Ljava/lang/String;Lsa/c;)Lwa/G;
+
+    move-result-object v0
+
+    sput-object v0, Lwa/v0;->b:Lwa/G;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final deserialize(Lva/c;)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p0, Lwa/v0;->b:Lwa/G;
+
+    invoke-interface {p1, p0}, Lva/c;->r(Lua/g;)Lva/c;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lva/c;->D()B
+
+    move-result p0
+
+    new-instance p1, Lw8/s;
+
+    invoke-direct {p1, p0}, Lw8/s;-><init>(B)V
+
+    return-object p1
+.end method
+
+.method public final getDescriptor()Lua/g;
+    .locals 0
+
+    sget-object p0, Lwa/v0;->b:Lwa/G;
+
+    return-object p0
+.end method
+
+.method public final serialize(Lva/d;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Lw8/s;
+
+    iget-byte p0, p2, Lw8/s;->a:B
+
+    const-string p2, "encoder"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/q;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object p2, Lwa/v0;->b:Lwa/G;
+
+    invoke-interface {p1, p2}, Lva/d;->q(Lua/g;)Lva/d;
+
+    move-result-object p1
+
+    invoke-interface {p1, p0}, Lva/d;->e(B)V
+
+    return-void
+.end method

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_palette_settings_list_view_round_corner_color" android:paddingBottom="@dimen/basic_bottom_bar_button_height" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/settings_screen_margin" android:paddingEnd="@dimen/settings_screen_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/editor_container" android:layout_width="match_parent" android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sec.android.app.sbrowser.multi_cp_native.SimpleHomePage android:id="@id/homepage_chn_page_view" android:layout_width="match_parent" android:layout_height="match_parent" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.sbrowser.multi_cp_native.SimpleHomePageCustomBackground android:id="@id/custom_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/default_custom_background" android:scaleType="centerCrop" android:contentDescription="@string/pref_homepage_title" />
+    <RelativeLayout android:id="@id/no_items_text_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/quickaccess_no_items_fullscreen_text_size" android:textColor="@color/quickaccess_no_items_fullscreen_text_color_new_gui" android:id="@id/no_items_text_fullscreen" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quickaccess_no_items" android:includeFontPadding="false" android:layout_centerInParent="true" style="@style/RobotoRegular" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/simple_homepage_outer_recyclerview" android:layout_width="match_parent" android:layout_height="match_parent" />
+</com.sec.android.app.sbrowser.multi_cp_native.SimpleHomePage>

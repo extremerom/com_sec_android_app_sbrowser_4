@@ -1,0 +1,90 @@
+.class public Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource$Callback;
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public fetch(Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource$Callback;)V
+    .locals 8
+
+    new-instance v0, Lcom/sec/android/app/sbrowser/common/utils/DateOnly;
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/sec/android/app/sbrowser/common/utils/DateOnly;-><init>(Ljava/util/Calendar;)V
+
+    const/4 v1, -0x6
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/sbrowser/common/utils/DateOnly;->nDaysLater(I)Lcom/sec/android/app/sbrowser/common/utils/DateOnly;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/sec/android/app/sbrowser/common/utils/DateOnly;->getTimeInMillis()J
+
+    move-result-wide v3
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/sec/android/app/sbrowser/common/utils/DateOnly;->nDaysLater(I)Lcom/sec/android/app/sbrowser/common/utils/DateOnly;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/sec/android/app/sbrowser/common/utils/DateOnly;->getTimeInMillis()J
+
+    move-result-wide v5
+
+    :try_start_0
+    new-instance v2, Lcom/sec/terrace/browser/content_block/TerraceContentBlockStatsHelper;
+
+    invoke-direct {v2}, Lcom/sec/terrace/browser/content_block/TerraceContentBlockStatsHelper;-><init>()V
+
+    new-instance v7, Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource$1;
+
+    invoke-direct {v7, p0, p1}, Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource$1;-><init>(Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource;Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource$Callback;)V
+
+    invoke-virtual/range {v2 .. v7}, Lcom/sec/terrace/browser/content_block/TerraceContentBlockStatsHelper;->getContentBlockCounts(JJLcom/sec/terrace/browser/content_block/TerraceContentBlockStatsHelper$ContentBlockStatsCallback;)V
+    :try_end_0
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "AdBlockerDataSource"
+
+    const-string v1, "Failed to initialize native libraries"
+
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    new-instance p0, Lcom/sec/android/app/sbrowser/quickaccess/model/PrivacyBoardResponse;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, v0}, Lcom/sec/android/app/sbrowser/quickaccess/model/PrivacyBoardResponse;-><init>(II)V
+
+    invoke-interface {p1, p0}, Lcom/sec/android/app/sbrowser/quickaccess/model/AdBlockerDataSource$Callback;->onResponse(Lcom/sec/android/app/sbrowser/quickaccess/model/PrivacyBoardResponse;)V
+
+    :goto_0
+    return-void
+.end method

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/ask_toolbar_bg" android:scrollbars="none" android:clickable="true" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dp" android:elevation="15.0dp" android:clipToOutline="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:id="@id/ask_bg_view" android:background="@drawable/ask_toolbar_bg" android:layout_width="match_parent" android:layout_height="0.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/ask_resizable_layout" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="@dimen/ask_resizable_layout_default_height" android:clipToOutline="false" app:layout_constraintBottom_toTopOf="@id/ask_fixed_layout"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <View android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="28.0dp" android:layout_height="28.0dp" android:layout_marginTop="14.0dp" android:src="@drawable/ic_4_stars_color" />
+            <com.sec.android.app.sbrowser.common.widget.AutoScaleTextView android:textSize="20.0sp" android:gravity="center" android:id="@id/ask_popup_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/lets_explore_together" app:textSizeDp="20.0dp" style="@style/RobotoMedium" />
+            <include android:id="@id/ask_menu_button_layout" layout="@layout/ask_menu_button_layout" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/question_list" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/ask_menu_button_layout" />
+            <View android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ask_fixed_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/auto_complete_list" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="26.0dp" android:layout_marginBottom="12.0dp" />
+            <include app:layout_constraintBottom_toBottomOf="parent" layout="@layout/ask_input_layout" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton android:layout_gravity="end|top" android:id="@id/ask_close_button" android:background="@drawable/ai_summarize_close_button_background_one_ui_8" android:layout_width="@dimen/summary_split_view_icon_size" android:layout_height="@dimen/summary_split_view_icon_size" android:layout_marginTop="16.0dp" android:src="@drawable/internet_ic_dialog_close" android:scaleType="fitCenter" android:contentDescription="@string/options_menu_exit" android:layout_marginEnd="16.0dp" app:tint="@color/read_aloud_toolbar_button_tint_color" />
+    <LinearLayout android:layout_gravity="center|top" android:id="@id/ask_resize_handler" android:padding="8.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:background="@drawable/ai_summarize_window_splitview_handler_background" android:layout_width="44.0dp" android:layout_height="4.0dp" />
+    </LinearLayout>
+</FrameLayout>

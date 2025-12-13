@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="@dimen/quickaccess_sync_bottom_button_padding_top" android:paddingBottom="@dimen/quickaccess_sync_bottom_button_padding_bottom" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="@dimen/quickaccess_sync_bottom_button_text_size" android:textColor="@color/quickaccess_sync_bottom_button_text_color" android:id="@id/no_shortcuts_button" android:background="@drawable/quickaccess_sync_bottom_button_background" android:visibility="gone" android:layout_width="@dimen/quickaccess_sync_bottom_button_width" android:layout_height="@dimen/quickaccess_sync_bottom_button_height" android:stateListAnimator="?seslSmallTouchAnimator" style="@style/RobotoMedium" />
+</LinearLayout>

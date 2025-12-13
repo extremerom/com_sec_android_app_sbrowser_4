@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sbrowser="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/download_intercept_always_enable_title" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_download_intercept_enable" />
+    <androidx.preference.Preference android:title="@string/download_intercept_profile_title" android:key="pref_download_intercept_profile" />
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/download_intercept_timeout_search_official_enable" android:key="pref_download_intercept_search_official_apk_timeout_enable" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_download_intercept_search_official_apk_timeout_enable" />
+    <androidx.preference.Preference android:title="@string/download_intercept_timeout_search_official_title" android:key="pref_download_intercept_search_official_apk_timeout_second" />
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/download_intercept_debug_message_enable" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_download_intercept_debug_message_enable" />
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/download_intercept_debug_always_china_network_title" android:summary="@string/download_intercept_debug_always_china_network_summary" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_download_intercept_debug_always_china_network_enable" />
+</androidx.preference.PreferenceScreen>

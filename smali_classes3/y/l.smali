@@ -1,0 +1,57 @@
+.class public abstract Ly/l;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Lt5/c;
+
+.field public static final b:Lt5/c;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 8
+
+    const-string v6, "r"
+
+    const-string v7, "hd"
+
+    const-string v0, "nm"
+
+    const-string v1, "g"
+
+    const-string v2, "o"
+
+    const-string v3, "t"
+
+    const-string v4, "s"
+
+    const-string v5, "e"
+
+    filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lt5/c;->X0([Ljava/lang/String;)Lt5/c;
+
+    move-result-object v0
+
+    sput-object v0, Ly/l;->a:Lt5/c;
+
+    const-string v0, "p"
+
+    const-string v1, "k"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lt5/c;->X0([Ljava/lang/String;)Lt5/c;
+
+    move-result-object v0
+
+    sput-object v0, Ly/l;->b:Lt5/c;
+
+    return-void
+.end method

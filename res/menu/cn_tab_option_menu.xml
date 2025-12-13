@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/cn_tab_option_group_features">
+        <item android:id="@id/cn_tab_option_refresh" android:orderInCategory="0" android:title="@string/accessibility_button_refresh" />
+        <item android:id="@id/cn_tab_option_add_to_bookmarks" android:orderInCategory="0" android:title="@string/options_menu_add_bookmark" />
+        <item android:id="@id/cn_tab_option_add_to_short_cut" android:orderInCategory="0" android:title="@string/quickaccess_add_button" />
+        <item android:id="@id/cn_tab_option_read_aloud" android:orderInCategory="0" android:title="@string/ai_read_aloud" />
+    </group>
+</menu>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sbrowser="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.PreferenceScreen android:title="@string/multi_cp_native_debug_settings_title" android:fragment="com.sec.android.app.sbrowser.settings.debug.MultiCPNativeDebugPreferenceFragment" />
+    <androidx.preference.PreferenceScreen android:title="@string/download_intercept_debug_settings_title" android:fragment="com.sec.android.app.sbrowser.settings.debug.DLInterceptDebugPreferenceFragment" />
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/open_page_by_NewsfeedCNTab" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_open_page_by_newsfeed_cn_tab_enable" />
+    <com.sec.android.app.sbrowser.settings.debug.CnDebugSwitchPreference android:title="@string/support_toast_of_NewsfeedCNTab" sbrowser:debugDefaultValue="false" sbrowser:debugKey="pref_newsfeed_cn_tab_toast_enable" />
+</PreferenceScreen>

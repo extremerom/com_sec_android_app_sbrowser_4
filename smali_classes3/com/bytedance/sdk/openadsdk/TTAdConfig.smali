@@ -1,0 +1,51 @@
+.class public final Lcom/bytedance/sdk/openadsdk/TTAdConfig;
+.super Lcom/bytedance/sdk/openadsdk/CSJConfig;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bytedance/sdk/openadsdk/TTAdConfig$Builder;
+    }
+.end annotation
+
+
+# instance fields
+.field private a:Lcom/bytedance/sdk/openadsdk/live/ITTLiveTokenInjectionAuth;
+
+
+# direct methods
+.method private constructor <init>(Lcom/bytedance/sdk/openadsdk/CSJConfig$a;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/bytedance/sdk/openadsdk/CSJConfig;-><init>(Lcom/bytedance/sdk/openadsdk/CSJConfig$a;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lcom/bytedance/sdk/openadsdk/CSJConfig$a;Lcom/bytedance/sdk/openadsdk/TTAdConfig$1;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/bytedance/sdk/openadsdk/TTAdConfig;-><init>(Lcom/bytedance/sdk/openadsdk/CSJConfig$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getInjectionAuth()Lcom/bytedance/sdk/openadsdk/live/ITTLiveTokenInjectionAuth;
+    .locals 0
+
+    iget-object p0, p0, Lcom/bytedance/sdk/openadsdk/TTAdConfig;->a:Lcom/bytedance/sdk/openadsdk/live/ITTLiveTokenInjectionAuth;
+
+    return-object p0
+.end method
+
+.method public setInjectionAuth(Lcom/bytedance/sdk/openadsdk/live/ITTLiveTokenInjectionAuth;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/TTAdConfig;->a:Lcom/bytedance/sdk/openadsdk/live/ITTLiveTokenInjectionAuth;
+
+    return-void
+.end method

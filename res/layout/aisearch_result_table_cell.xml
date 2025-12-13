@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="14.0sp" android:textColor="@color/black_color" android:ellipsize="none" android:id="@id/aisearch_cell_text" android:background="@drawable/table_cell_bg" android:paddingTop="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scrollHorizontally="false" android:singleLine="false" android:paddingStart="10.0dp" android:paddingEnd="10.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

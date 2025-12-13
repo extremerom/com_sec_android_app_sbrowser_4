@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="@dimen/basic_dialog_margin_top" android:paddingBottom="6.0dp" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/nal_popup_bottom_button">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="38.0dp" android:layout_marginEnd="46.0dp">
+            <TextView android:textSize="16.0sp" android:id="@id/nal_popup_title_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dp" android:layout_marginBottom="8.0dp" style="@style/CombinedDataDialogContent" />
+            <TextView android:id="@id/nal_popup_required_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/combined_data_dialog_required" android:layout_below="@id/nal_popup_title_tv" style="@style/CombinedDataDialogContent" />
+            <TextView android:id="@id/nal_popup_title_media_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_below="@id/nal_popup_required_tv" android:paddingStart="6.0dp" style="@style/CombinedDataDialogRequiredContent" />
+            <TextView android:id="@id/nal_popup_optional_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dp" android:text="@string/combined_data_dialog_optional" android:layout_below="@id/nal_popup_title_media_tv" style="@style/CombinedDataDialogContent" />
+            <CheckBox android:id="@id/nal_popup_checkbox_your_location" android:text="@string/combined_data_dialog_your_location" android:layout_below="@id/nal_popup_optional_tv" style="@style/NAL_DialogCheckBox" />
+            <CheckBox android:id="@id/nal_popup_checkbox_camera" android:layout_below="@id/nal_popup_checkbox_your_location" style="@style/NAL_DialogCheckBox" />
+            <CheckBox android:id="@id/nal_popup_checkbox_microphone" android:layout_below="@id/nal_popup_checkbox_camera" style="@style/NAL_DialogCheckBox" />
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/nal_popup_bottom_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@id/deny_button" style="@style/NAL_DialogActionButton" />
+        <View android:layout_gravity="center_vertical" android:background="#e6e6e6" android:layout_width="1.0dp" android:layout_height="16.0dp" />
+        <Button android:id="@id/allow_button" style="@style/NAL_DialogActionButton" />
+    </LinearLayout>
+</RelativeLayout>

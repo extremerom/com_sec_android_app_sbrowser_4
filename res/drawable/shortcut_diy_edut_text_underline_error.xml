@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="-10.0dp" android:top="-10.0dp" android:right="-10.0dp" android:bottom="0.0dp">
+        <shape>
+            <solid android:color="@color/color_transparent" />
+            <stroke android:width="2.0dp" android:color="@color/diy_shortcut_underline_warning_color" />
+        </shape>
+    </item>
+</layer-list>

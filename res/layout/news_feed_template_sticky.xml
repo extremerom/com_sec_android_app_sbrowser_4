@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/video_view_container" style="@style/NewContentLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/news_sticky_dot" android:background="@drawable/news_feed_sticky_dot_bg_light" android:layout_width="14.0dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/StickyNewsContentText" />
+    <TextView android:id="@id/news_title_tv" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/news_sticky_dot" app:layout_constraintTop_toTopOf="parent" style="@style/StickyNewsContentText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <RelativeLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/selected_channel_btn" android:text="@string/category_selected_categories" android:layout_alignParentTop="true" style="@style/ChannelEditTittleTextStyle" />
+            <TextView android:id="@id/all_channel_btn" android:text="@string/category_all_categories" android:layout_below="@id/selected_channel_edit_recylerview" style="@style/ChannelEditTittleTextStyle" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/unselected_channel_edit_recycler_view" android:background="@drawable/multi_cp_shape_corner_panel" android:padding="@dimen/news_feed_channel_panel_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/all_channel_btn" android:layout_marginStart="@dimen/news_feed_channel_layout_margin_start" android:layout_marginEnd="@dimen/news_feed_channel_layout_margin_end" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/selected_channel_edit_recylerview" android:background="@drawable/multi_cp_shape_corner_panel" android:padding="@dimen/news_feed_channel_panel_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/selected_channel_btn" android:layout_marginStart="@dimen/news_feed_channel_layout_margin_start" android:layout_marginEnd="@dimen/news_feed_channel_layout_margin_end" />
+        </RelativeLayout>
+    </ScrollView>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/multicp_native_done_or_cancel" />
+</LinearLayout>

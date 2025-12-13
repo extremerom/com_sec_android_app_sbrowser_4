@@ -1,0 +1,25 @@
+.class public final LZ8/h;
+.super LZ8/l;
+.source "SourceFile"
+
+
+# static fields
+.field public static final c:LZ8/h;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, LZ8/h;
+
+    sget-object v1, LY8/q;->l:Lz9/c;
+
+    const-string v2, "Function"
+
+    invoke-direct {v0, v2, v1}, LZ8/l;-><init>(Ljava/lang/String;Lz9/c;)V
+
+    sput-object v0, LZ8/h;->c:LZ8/h;
+
+    return-void
+.end method

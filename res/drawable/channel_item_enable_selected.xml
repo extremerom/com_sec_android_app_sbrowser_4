@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/multi_cp_native_background_ripple" />
+    <corners android:radius="16.0dp" />
+    <stroke android:width="@dimen/news_feed_channel_item_shape_stoke_width" android:color="@color/color_palette_channel_item_shape_stoke_color_selected" />
+</shape>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/multicp_contain_view" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/multicp_native_view" />
+    <ViewStub android:id="@id/channels_edit_view_stub" android:layout="@layout/layout_channel_edit_view" android:inflatedId="@id/layout_channel_edit_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ViewStub android:id="@id/shortcut_edit_view_stub" android:layout="@layout/layout_sc_manager_view" android:inflatedId="@id/layout_sc_manager_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <ViewStub android:id="@id/select_city_view_stub" android:layout="@layout/layout_select_city_view" android:inflatedId="@id/layout_select_city_view" android:layout_width="match_parent" android:layout_height="match_parent" />
+</FrameLayout>

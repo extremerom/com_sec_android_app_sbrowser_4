@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="3.0dp" android:width="3.0dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/news_feed_sticky_item_title_dot_color_night_mode" />
+        </shape>
+    </item>
+</layer-list>

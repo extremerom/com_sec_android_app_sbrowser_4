@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/color_palette_pref_layout_selection_popup_keep_at_top_btn_bg" />
+    <corners android:radius="@dimen/promotional_popup_window_button_radius" />
+</shape>

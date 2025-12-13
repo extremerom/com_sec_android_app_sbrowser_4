@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_palette_list_view_action_bar_bg_color" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@id/device_list" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:splitMotionEvents="false" android:paddingHorizontal="@dimen/settings_layout_padding_horizontal" />
+    <include android:id="@id/no_shortcuts_layout" android:paddingHorizontal="@dimen/settings_layout_padding_horizontal" layout="@layout/quickaccess_sync_no_shortcuts_layout" />
+</RelativeLayout>

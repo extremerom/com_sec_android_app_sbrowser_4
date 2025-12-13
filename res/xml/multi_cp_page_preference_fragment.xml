@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/multicp_debug_page_profiles" android:title="MultiCp Profile" android:key="pref_debug_multi_cp_page_profile_cn" android:summary="%s" android:entryValues="@array/multicp_debug_page_profiles" />
+    <Preference android:title="MultiCp url" android:key="pref_debug_multi_cp_page_selected_profile_url" />
+    <Preference android:title="MultiCp Version" android:key="pref_debug_multi_cp_page_version" />
+</PreferenceScreen>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ask_popup_input_box_bg" />
+    <corners android:topLeftRadius="@dimen/ai_option_popup_radius" android:topRightRadius="@dimen/ai_option_popup_radius" />
+</shape>

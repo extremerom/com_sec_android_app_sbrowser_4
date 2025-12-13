@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="@color/news_feed_channel_tab_text_color_selected_light" />
+    <item android:color="@color/news_feed_channel_tab_text_color_default_light" />
+</selector>

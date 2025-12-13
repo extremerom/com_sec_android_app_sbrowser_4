@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/help_intro_background" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/secondary_page_for_setting_scroll_view" android:scrollbars="vertical" android:descendantFocusability="afterDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_above="@id/help_intro_legal_button_outer" android:paddingHorizontal="@dimen/help_intro_legal_padding_start_end">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/secondary_page_for_setting_scroll_inner" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/help_intro_legal_title_layout" />
+            <ViewStub android:id="@id/stub_help_intro_secondary_secure_download" android:layout="@layout/help_intro_legal_secondary_secure_download_cn" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <ViewStub android:id="@id/stub_help_intro_secondary_news_feed" android:layout="@layout/help_intro_legal_secondary_news_feed_cn" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/help_intro_legal_bottom_button_cn" />
+</RelativeLayout>

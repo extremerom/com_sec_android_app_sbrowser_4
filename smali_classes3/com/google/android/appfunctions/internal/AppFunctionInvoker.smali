@@ -1,0 +1,19 @@
+.class public interface abstract Lcom/google/android/appfunctions/internal/AppFunctionInvoker;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a()Ljava/util/Set;
+.end method
+
+.method public abstract b(LY0/a;Ljava/lang/String;Lz8/f;LB8/d;)Ljava/lang/Object;
+.end method

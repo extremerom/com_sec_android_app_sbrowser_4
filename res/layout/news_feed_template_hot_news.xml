@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/header_view_container" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/NewContentLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/rv_sticky_news" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <View android:id="@id/view_space" android:layout_width="match_parent" android:layout_height="10.0dp" />
+    <androidx.cardview.widget.CardView android:id="@id/hot_news_card" android:background="@android:color/transparent" app:cardBackgroundColor="@android:color/transparent" app:cardCornerRadius="@dimen/news_feed_hot_news_item_radius" app:cardElevation="0.0dp" style="@style/NewContentLayout">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.viewpager2.widget.ViewPager2 android:id="@id/view_page" android:layout_width="match_parent" android:layout_height="@dimen/news_feed_hot_news_item_height" />
+            <com.sec.android.app.sbrowser.multi_cp_native.newsfeed.news.viewholder.template.HotNewsIndicatorView android:id="@id/indicator_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/news_feed_hot_news_indicator_margin_bottom" android:layout_alignBottom="@id/view_page" android:layout_centerHorizontal="true" android:layout_marginHorizontal="@dimen/news_feed_hot_news_item_content_margin_horizontal" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
