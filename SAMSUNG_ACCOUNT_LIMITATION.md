@@ -108,12 +108,54 @@ These features will **NOT work** in the modified version:
 3. **Security by Design**: This is an intentional security feature to prevent malicious apps from impersonating official Samsung apps
 4. **No Workaround**: Any workaround would require compromising Samsung's servers (illegal and impossible)
 
+### Why "Sending a Fake Signature" Won't Work
+
+Some users have suggested extracting the original Samsung signature and sending it to the server. This approach is **fundamentally impossible** because:
+
+#### How APK Signatures Actually Work
+
+1. **APK Signing Process**:
+   ```
+   Your APK → Hash calculation → Sign with private key → Embed signature
+   ```
+
+2. **Server Verification Process**:
+   ```
+   Server receives login request
+       ↓
+   Server sends cryptographic challenge
+       ↓
+   App must sign challenge with private key
+       ↓
+   Server verifies signature using Samsung's public key
+       ↓
+   FAILS: Modified APK doesn't have Samsung's private key
+   ```
+
+#### What Cannot Be Spoofed
+
+- ❌ **Cryptographic challenge-response**: Server sends random data that must be signed with Samsung's private key
+- ❌ **Certificate chain validation**: Server validates the entire X.509 certificate chain embedded in the APK
+- ❌ **SafetyNet/Play Integrity**: Google services detect if the APK has been modified
+- ❌ **APK signature verification**: The signature is mathematically tied to every byte of the APK
+
+#### What We Already Did (Local Bypasses Only)
+
+The existing modifications bypass **local** checks:
+- ✅ `SignatureChecker.isSamsungPlatformSignature()` returns `true`
+- ✅ `ApkSignatureChecker.validate()` returns `true`
+- ✅ These allow the modified app to run and bypass local permission checks
+
+These local bypasses work because they don't involve cryptographic verification. However, Samsung's authentication servers perform **real cryptographic validation** that cannot be bypassed without Samsung's private key.
+
 ### What Would Be Needed (Impossible)
 
 To make Samsung account login work, you would need:
-- ❌ Samsung's private signing key (impossible to obtain)
+- ❌ Samsung's private signing key (impossible to obtain - Samsung keeps this secret)
+- ❌ Ability to generate valid cryptographic signatures (requires the private key)
 - ❌ Whitelist your custom signature on Samsung's servers (impossible without Samsung's cooperation)
 - ❌ Compromise Samsung's authentication infrastructure (illegal)
+- ❌ Bypass Google's SafetyNet/Play Integrity (detects modified APKs at the system level)
 
 ## Conclusion
 
