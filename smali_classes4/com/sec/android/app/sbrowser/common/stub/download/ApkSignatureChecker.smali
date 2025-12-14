@@ -7,46 +7,8 @@
 .method private static checkSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    :try_start_0
-    invoke-static {p0, p1}, Lcom/sec/android/app/sbrowser/common/stub/download/ApkSignatureChecker;->getCertificateBytes(Landroid/content/Context;Ljava/lang/String;)[B
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/sec/android/app/sbrowser/common/stub/download/ApkSignatureChecker;->loadCertificates([B)Ljava/security/cert/Certificate;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/sec/android/app/sbrowser/common/stub/download/ApkSignatureChecker;->getCertStringFromCert(Ljava/security/cert/Certificate;)Ljava/lang/String;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz p0, :cond_0
-
+    # Bypass APK signature verification - always return true
     const/4 p0, 0x1
-
-    return p0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "Stub.ApkSignatureChecker"
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    const/4 p0, 0x0
 
     return p0
 .end method
@@ -150,9 +112,8 @@
 .method public static validate(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/sec/android/app/sbrowser/common/stub/download/ApkSignatureChecker;->checkSignature(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result p0
+    # Bypass APK validation - always return true
+    const/4 p0, 0x1
 
     return p0
 .end method
