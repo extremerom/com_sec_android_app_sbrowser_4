@@ -2367,61 +2367,9 @@
 .method public static isChina()Z
     .locals 4
 
-    invoke-static {}, Lcom/sec/terrace/TerraceApplicationStatus;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
+    # Modified to always return false - disable China restrictions
     const/4 v1, 0x0
 
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-static {}, Lcom/sec/terrace/TerraceApplicationStatus;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v2, "phone"
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/TelephonyManager;
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    const/4 v3, 0x3
-
-    if-le v2, v3, :cond_2
-
-    const-string v2, "460"
-
-    invoke-virtual {v0, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_2
     return v1
 .end method
 
