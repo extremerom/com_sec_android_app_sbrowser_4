@@ -103,13 +103,13 @@
         "Encoding": "windows-1251",
         "SuggestURL": "https://suggests.go.mail.ru/chrome?q={searchTerms}"
     },
-    "bing_zh_CN": {
-        "Label": "必应",
-        "Keyword": "bing.com",
-        "FaviconURL": "https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico",
-        "SearchURL": "https://www.bing.com/search?setmkt=zh-CN&q={searchTerms}",
+    "google_intl": {
+        "Label": "Google",
+        "Keyword": "google.com",
+        "FaviconURL": "https://www.google.com/images/branding/product/ico/googleg_alldp.ico",
+        "SearchURL": "https://www.google.com/search?ie={inputEncoding}&client={CID}&source=android-browser&q={searchTerms}",
         "Encoding": "UTF-8",
-        "SuggestURL": "https://api.bing.com/osjson.aspx?query={searchTerms}&language={language}"
+        "SuggestURL": "{google:baseSuggestURL}search?{google:searchFieldtrialParameter}client=samsung-mobile&{tpsf}&xssi=t&q={searchTerms}&{google:inputType}{google:cursorPosition}{google:currentPageUrl}{google:pageClassification}{google:searchVersion}{google:sessionToken}{google:prefetchQuery}sugkey={google:suggestAPIKeyParameter}"
     },
     "goo": {
         "Label": "goo",
