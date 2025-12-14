@@ -186,51 +186,8 @@
         .end annotation
     .end param
 
-    const-string v0, "ctx"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/q;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-direct {p0, p1}, Lcom/sec/android/app/sbrowser/common/utils/SignatureChecker;->getCallerPackageName(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
+    # Bypass signature verification - always return true
     const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    invoke-static {}, Lcom/sec/android/app/sbrowser/utils/CnDeviceInfoHelper;->getInstance()Lcom/sec/android/app/sbrowser/utils/CnDeviceInfoHelper;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, v0}, Lcom/sec/android/app/sbrowser/utils/CnDeviceInfoHelper;->getSHA256Signature(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "getSHA256Signature(...)"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/q;->g(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-direct {p0, p1}, Lcom/sec/android/app/sbrowser/common/utils/SignatureChecker;->isMatchSignature(Ljava/lang/String;)Z
-
-    move-result p0
 
     return p0
 .end method

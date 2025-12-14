@@ -2,7 +2,7 @@
 
 ## Modificaciones Realizadas
 
-Este proyecto ha desbloqueado todos los menús y opciones de desarrollador ocultas en Samsung Internet Browser.
+Este proyecto ha desbloqueado todos los menús y opciones de desarrollador ocultas en Samsung Internet Browser, además de desactivar las verificaciones de integridad y firma.
 
 ### Cambios Implementados:
 
@@ -31,6 +31,19 @@ Este proyecto ha desbloqueado todos los menús y opciones de desarrollador ocult
   - Handoff Debug
   - Consent Debug
   - Y muchas más...
+
+#### 3. **Verificación de Firma Desactivada** ⭐ NUEVO
+- **Archivo**: `smali_classes4/com/sec/android/app/sbrowser/common/utils/SignatureChecker.smali`
+- **Método**: `isSamsungPlatformSignature()`
+- **Cambio**: Modificado para siempre retornar `true` (verificación exitosa)
+- **Efecto**: La app acepta cualquier firma, permitiendo modificaciones y reinstalaciones
+
+#### 4. **Validación de APK Desactivada** ⭐ NUEVO
+- **Archivo**: `smali_classes4/com/sec/android/app/sbrowser/common/stub/download/ApkSignatureChecker.smali`
+- **Métodos modificados**:
+  - `checkSignature()` - Siempre retorna `true`
+  - `validate()` - Siempre retorna `true`
+- **Efecto**: Bypass completo de verificaciones de integridad del APK
 
 ### Opciones de Debug Disponibles Ahora:
 
@@ -61,6 +74,13 @@ Este proyecto ha desbloqueado todos los menús y opciones de desarrollador ocult
    - **Secret Mode**: Configuración de modo secreto
    - **Tab Manager**: Gestión avanzada de pestañas
    - **Video/Multimedia**: Opciones de reproducción
+
+### Ventajas de las Modificaciones de Seguridad:
+
+✅ **Sin restricciones de firma**: Puedes modificar y recompilar el APK sin problemas
+✅ **Sin verificación de integridad**: Las modificaciones no serán detectadas
+✅ **Compatible con firmas personalizadas**: No necesitas la firma original de Samsung
+✅ **Actualizable**: Puedes hacer modificaciones iterativas sin problemas
 
 ### Cómo Reconstruir la APK:
 
@@ -119,7 +139,8 @@ adb install -r SamsungBrowser_Debug_Unlocked_aligned.apk
 - ⚠️ **Disclaimer**: Estos cambios son solo para propósitos educativos y de desarrollo
 - ⚠️ **Backup**: Haz backup de tu APK original antes de modificar
 - ⚠️ **Compatibilidad**: Estos cambios son para la versión específica de Samsung Internet Browser incluida en este repositorio
-- ⚠️ **Instalación**: Necesitarás desinstalar la versión original antes de instalar la versión modificada, o usar una firma diferente
+- ⚠️ **Instalación**: Necesitarás desinstalar la versión original antes de instalar la versión modificada
+- ✅ **Sin problemas de firma**: Las verificaciones de firma están desactivadas, puedes usar cualquier certificado
 
 ### Verificación de Cambios:
 
@@ -129,14 +150,31 @@ Después de instalar, verifica que los cambios funcionan:
 2. ✅ Entra a Debug settings y verifica que hay múltiples opciones
 3. ✅ Verifica que opciones como "QuickAccess Debug" y "Managed Config Debug" están visibles
 4. ✅ Prueba acceder a diferentes secciones de debug
+5. ✅ **NUEVO**: La app funciona correctamente con firma personalizada
 
 ### Archivos Modificados:
 
 ```
-smali_classes5/com/sec/android/app/sbrowser/settings/
-├── SettingsFragmentUtil.smali (shouldDisableDebugSettings)
-└── utils/SettingsUtils.smali (hidePreference - securityLevel check)
+Desbloqueo de Menús Debug:
+├── smali_classes5/com/sec/android/app/sbrowser/settings/
+│   ├── SettingsFragmentUtil.smali (shouldDisableDebugSettings)
+│   └── utils/SettingsUtils.smali (hidePreference - securityLevel check)
+│
+Bypass de Verificaciones de Seguridad:
+└── smali_classes4/com/sec/android/app/sbrowser/common/
+    ├── utils/SignatureChecker.smali (isSamsungPlatformSignature)
+    └── stub/download/ApkSignatureChecker.smali (checkSignature, validate)
 ```
+
+### Resumen de Cambios:
+
+| Categoría | Archivo | Método | Cambio |
+|-----------|---------|--------|--------|
+| Debug Menu | SettingsFragmentUtil.smali | shouldDisableDebugSettings() | Retorna false |
+| Security Level | SettingsUtils.smali | hidePreference() | Skip removal |
+| Signature Check | SignatureChecker.smali | isSamsungPlatformSignature() | Retorna true |
+| APK Validation | ApkSignatureChecker.smali | checkSignature() | Retorna true |
+| APK Validation | ApkSignatureChecker.smali | validate() | Retorna true |
 
 ### Contribuciones:
 
@@ -144,4 +182,5 @@ Si encuentras más opciones ocultas o tienes sugerencias de mejora, por favor co
 
 ---
 
-**¡Disfruta explorando todas las opciones ocultas de Samsung Internet Browser!** 🚀
+**¡Disfruta explorando todas las opciones ocultas de Samsung Internet Browser sin restricciones de firma!** 🚀🔓
+
