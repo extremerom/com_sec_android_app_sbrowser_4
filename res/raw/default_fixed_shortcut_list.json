@@ -1,13 +1,13 @@
 {
   "shortcutList": [{
-    "title": "百度搜索",
+    "title": "Google Search",
     "color": "#BABABA",
     "icon": "",
-    "link": "https://m.baidu.com/?tn=&from=1013755s"
+    "link": "https://www.google.com/"
   }, {
-    "title": "58同城",
+    "title": "Google Maps",
     "color": "#BABABA",
     "icon": "",
-    "link": "https://jumpluna.58.com/i/2da6h2ea43v43nkdq9g"
+    "link": "https://maps.google.com/"
   }]
 }

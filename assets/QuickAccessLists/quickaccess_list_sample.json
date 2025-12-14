@@ -1,6 +1,6 @@
 {"list": [
   {"title":"Facebook", "url":"http://Facebook.com/"},
-  {"title":"Baidu", "url":"https://Baidu.com"},
+  {"title":"Google", "url":"https://www.google.com"},
   {"title":"Disney", "url":"http://disney.com"},
   {"title":"Steam", "url":"https://store.steampowered.com"},
   {"title":"Airbnb", "url":"https://airbnb.com"},
@@ -8,7 +8,7 @@
   {"title":"Redhat", "url":"https://redhat.com"},
   {"title":"Yahoo", "url":"http://Yahoo.com/"},
   {"title":"Wikipedia", "url":"http://wikipedia.org/"},
-  {"title":"Taobao", "url":"http://Taobao.com"},
+  {"title":"Amazon", "url":"http://amazon.com"},
   {"title":"Vk", "url":"http://Vk.com"},
   {"title":"Aws", "url":"https://aws.amazon.com"},
   {"title":"Twitter", "url":"http://Twitter.com"},
@@ -24,11 +24,11 @@
   {"title":"Chanel", "url":"https://chanel.com"},
   {"title":"React", "url":"https://reactjs.org"},
   {"title":"Investing", "url":"http://investing.com"},
-  {"title":"Sohu", "url":"http://Sohu.com"},
-  {"title":"Sina", "url":"http://sina.com.cn"},
+  {"title":"YouTube", "url":"http://youtube.com"},
+  {"title":"Gmail", "url":"http://gmail.com"},
   {"title":"LinkedIn", "url":"http://linkedin.com"},
   {"title":"Dunkin Donuts", "url":"https://dunkindonuts.com"},
-  {"title":"Weibo", "url":"http://weibo.com"},
+  {"title":"GitHub", "url":"http://github.com"},
   {"title":"Pinterest", "url":"https://pinterest.com"},
   {"title":"Yandex", "url":"http://yandex.ru"},
   {"title":"Azure", "url":"https://azure.microsoft.com"},
@@ -51,5 +51,5 @@
   {"title":"IMDB", "url":"http://imdb.com"},
   {"title":"Paypal", "url":"http://paypal.com"},
   {"title":"CNN", "url":"http://cnn.com"},
-  {"title":"Youku", "url":"http://youku.com"}
+  {"title":"Google Drive", "url":"http://drive.google.com"}
 ]}
